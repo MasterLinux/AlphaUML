@@ -64,11 +64,24 @@ EndOfLine
  */
 JavaDocComment =
     "/**"
-    (!"*/" (. /
-        ("@param" WhiteSpace+ _w:(. !EndOfLine)* EndOfLine {return _w.join("")})?
-    ))*
-    "*/"
+    _p:(
+            (!("*/" / JavaDocTag) .)* {return null;}
+        /   JavaDocParam
+    )* 
+    "*/" {return _p;}
 
+JavaDocTag = (
+        JavaDocParam
+)
+
+JavaDocParam =
+    "@param" WhiteSpace+ _n:(_n:Word WhiteSpace+ {return _n;})? _d:(!EndOfLine _d:. {return _d;})* EndOfLine
+    {
+        return {
+            name: _n !== "" ? _n : null,
+            description: _d.length !== 0 ? _d.join("") : null
+        };
+    }
 
 /*
  * keywords
