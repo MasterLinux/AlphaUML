@@ -1,0 +1,78 @@
+.class {
+    position: absolute;
+    width: 200px;
+    background: rgba(130, 130, 130, 0.3);
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+    .class .container { 
+        width: 190px;
+        float: left;
+        margin: 5px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+        .class .header {
+            width: 100%;
+            float: left;
+            text-align: center;
+            text-shadow: 0px 1px 0px rgba(77, 107, 108, 0.9);
+            background: rgba(44, 72, 82, 0.9);
+            color: rgba(26, 27, 30, 0.9);
+            font-size: 18pt;
+            border-top-right-radius: 8px;
+        }
+
+        .class .body {
+            width: 100%;
+            float: left;
+            background: rgba(181, 180, 164, 0.9);
+            border-bottom-left-radius: 8px;
+        }
+
+        .class .attributes {
+            width: 100%;
+            float: left;
+        }
+
+        .class .operations {
+            width: 100%;
+            float: left;
+        }
+
+.connector {
+    position: absolute;
+}
+
+    .connector.association.horizontal {
+        width: 200px;
+        border-bottom: 2px solid #000000;
+    }
+
+.point {
+    z-index: 100;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    cursor: pointer;
+}
+
+.line {
+    z-index: 50;
+    position: absolute;
+}
+
+    .line.horizontal {
+        border-bottom: 2px solid #000000;
+    }
+
+    .line.vertical {
+        border-left: 2px solid #000000;
+    }
