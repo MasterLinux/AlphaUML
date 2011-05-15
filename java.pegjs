@@ -4,15 +4,17 @@
  */
 
 Method =
+    _jd:JavaDocComment? (WhiteSpace / EndOfLine)*
     _v:VisibilityKeyword WhiteSpace+
     _m:ModifierKeyword? WhiteSpace?
     _d:DataTypeKeyword WhiteSpace+
     _n:Word WhiteSpace*
     "(" _pl:ParameterList ")"
-    (WhiteSpace / LineTerminatorSequence)*
+    (WhiteSpace / EndOfLine)*
     "{" (!"}" .)* "}" !.
     {
         return {
+            javaDoc: _jd,
             name: _n,
             visibility:  _v,
             modifier: _m,
@@ -43,20 +45,34 @@ ParameterList = (
     }
 )*
 
-WhiteSpace "whitespace"
+WhiteSpace
   = [\t\v\f \u00A0\uFEFF]
   / Zs
 
 //Separator, Space
 Zs = [\u0020\u00A0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000]
 
-LineTerminatorSequence "end of line"
+EndOfLine
   = "\n"
   / "\r\n"
   / "\r"
   / "\u2028" // line spearator
   / "\u2029" // paragraph separator
 
+/*
+ * comments
+ */
+JavaDocComment =
+    "/**"
+    (!"*/" (. /
+        ("@param" WhiteSpace+ _w:(. !EndOfLine)* EndOfLine {return _w.join("")})?
+    ))*
+    "*/"
+
+
+/*
+ * keywords
+ */
 Keyword = (
         DataTypeKeyword
     /   ModifierKeyword
