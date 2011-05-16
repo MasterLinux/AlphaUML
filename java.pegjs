@@ -6,19 +6,19 @@
 Method =
     _jd:JavaDocComment? (WhiteSpace / EndOfLine)*
     _v:VisibilityKeyword WhiteSpace+
-    _m:ModifierKeyword? WhiteSpace?
-    _d:DataTypeKeyword WhiteSpace+
+    _m:(_m:ModifierKeyword WhiteSpace+ {return _m;})?
+    _d:(_d:DataTypeKeyword WhiteSpace+ {return _d;})?
     _n:Word WhiteSpace*
     "(" _pl:ParameterList ")"
     (WhiteSpace / EndOfLine)*
     "{" (!"}" .)* "}" !.
     {
         return {
-            javaDoc: _jd,
+            javaDoc: _jd !== "" ? _jd : null,
             name: _n,
             visibility:  _v,
-            modifier: _m,
-            dataType: _d,
+            modifier: _m !== "" ? _m : null,
+            dataType: _d !== "" ? _d : "constructor",
             parameter: _pl
         }
     }
@@ -66,12 +66,13 @@ JavaDocComment =
     "/**"
     _p:(
             (!("*/" / JavaDocTag) .)* {return null;}
-        /   JavaDocParam
+        /   JavaDocTag
     )* 
     "*/" {return _p;}
 
 JavaDocTag = (
         JavaDocParam
+    /   JavaDocReturn
 )
 
 JavaDocParam =
@@ -81,6 +82,12 @@ JavaDocParam =
             name: _n !== "" ? _n : null,
             description: _d.length !== 0 ? _d.join("") : null
         };
+    }
+
+JavaDocReturn =
+    "@return" WhiteSpace+ _d:(!EndOfLine _d:. {return _d;})* EndOfLine
+    {
+        return _d.join("");
     }
 
 /*
