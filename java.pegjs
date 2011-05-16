@@ -75,6 +75,9 @@ JavaDocTag = (
     /   JavaDocReturn
 )
 
+JavaDocUML =
+    "@uml" WhiteSpace+ 
+
 JavaDocParam =
     "@param" WhiteSpace+ _n:(_n:Word WhiteSpace+ {return _n;})? _d:(!EndOfLine _d:. {return _d;})* EndOfLine
     {

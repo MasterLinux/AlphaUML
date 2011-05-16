@@ -15,10 +15,20 @@
     }
 
     .Frame .content {
-        width: 100%;
-        padding: 5px;
-        color: #1f1f1f;
+        display: inline-block;
+        position: relative;
+        width: 600px;
+        height: 270px;
     }
+
+        .Frame .content #codeEditor {
+            position: absolute;
+            margin: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
 
 .Tab {
     height: 26px;
