@@ -26,7 +26,7 @@
       <file leaf-file-name="Editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/content/Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="35" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+            <state line="14" column="51" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="37" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+            <state line="29" column="19" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="AlphaUML.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlphaUML.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="58" selection-start="363" selection-end="363" vertical-scroll-proportion="-4.576923">
+            <state line="7" column="58" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,25 +53,43 @@
       <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="11" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
+            <state line="47" column="29" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Content.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Content.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/Content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="8" selection-start="313" selection-end="331" vertical-scroll-proportion="0.28960818">
+            <state line="110" column="25" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tab.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Frame.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="46" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ace-uncompressed.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frameworks/ace/ace-uncompressed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8852" column="9" selection-start="285149" selection-end="285149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tab.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="40" column="39" selection-start="906" selection-end="906" vertical-scroll-proportion="0.36429432">
               <folding />
             </state>
           </provider>
@@ -117,43 +135,25 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/ui/TabContent.js" />
         <option value="$PROJECT_DIR$/lib/ui/TabBar.js" />
         <option value="$PROJECT_DIR$/lib/Obj.js" />
-        <option value="$PROJECT_DIR$/lib/ui/Tab.js" />
         <option value="$PROJECT_DIR$/lib/parser/keywords.json" />
         <option value="$PROJECT_DIR$/lib/parser/keywords.js" />
         <option value="$PROJECT_DIR$/lib/parser/language/java.js" />
         <option value="$PROJECT_DIR$/frameworks/Parser.js" />
-        <option value="$PROJECT_DIR$/java.pegjs" />
         <option value="$USER_HOME$/Desktop/editor.html" />
         <option value="$PROJECT_DIR$/frameworks/ace/ace.js" />
-        <option value="$PROJECT_DIR$/lib/ui/Content.js" />
         <option value="$PROJECT_DIR$/AlphaUML.html" />
-        <option value="$PROJECT_DIR$/lib/Main.js" />
+        <option value="$PROJECT_DIR$/java.pegjs" />
         <option value="$PROJECT_DIR$/lib/ui/content/Editor.js" />
+        <option value="$PROJECT_DIR$/lib/ui/Tab.js" />
+        <option value="$PROJECT_DIR$/lib/Main.js" />
         <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
+        <option value="$PROJECT_DIR$/lib/ui/Frame.js" />
+        <option value="$PROJECT_DIR$/lib/ui/Content.js" />
       </list>
     </option>
   </component>
@@ -184,7 +184,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,24 +220,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apetheory_blue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -258,47 +239,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frameworks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,12 +373,11 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25144842" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18395658" sideWeight="0.34960273" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18576598" sideWeight="0.28376845" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18395658" sideWeight="0.33825198" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18576598" sideWeight="0.70715094" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61748016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3030647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -441,6 +386,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2635838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -487,23 +433,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ui/TabBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="36" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/parser/language/java.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/TextInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="42" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Obj.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="15" selection-start="333" selection-end="344" vertical-scroll-proportion="0.0" />
@@ -514,18 +443,9 @@
         <state line="6" column="36" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java.pegjs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="33" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="156" selection-end="391" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
+        <state line="6" column="2" selection-start="156" selection-end="391" vertical-scroll-proportion="-3.9230769" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/Parser.js">
@@ -533,58 +453,76 @@
         <state line="412" column="24" selection-start="12419" selection-end="12419" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/ace/ace-uncompressed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3898" column="15" selection-start="124171" selection-end="124178" vertical-scroll-proportion="99.925316">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/ace/ace.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="99" selection-start="99" selection-end="106" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="99" selection-start="99" selection-end="106" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
+    <entry file="file://$PROJECT_DIR$/frameworks/ace/cockpit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/ace/cockpit-uncompressed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.020906" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java.pegjs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="20" selection-start="628" selection-end="628" vertical-scroll-proportion="0.019906323">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AlphaUML.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="363" selection-end="363" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
+        <state line="7" column="58" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Main.js">
+    <entry file="file://$PROJECT_DIR$/frameworks/ace/ace-uncompressed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="11" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8852" column="9" selection-start="285149" selection-end="285149" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/content/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="35" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+        <state line="14" column="51" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="46" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="37" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+        <state line="29" column="19" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="8" selection-start="313" selection-end="331" vertical-scroll-proportion="0.28960818">
+        <state line="110" column="25" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="29" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="39" selection-start="906" selection-end="906" vertical-scroll-proportion="0.36429432">
           <folding />
         </state>
       </provider>

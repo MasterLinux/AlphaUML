@@ -3,12 +3,30 @@
  * as a parser expression grammar
  */
 
+Class =
+    _v:VisibilityKeyword WhiteSpace+
+    "class" WhiteSpace+
+    _n:WordNumber WhiteSpace+
+    _e:("extends" WhiteSpace+ _e:WordNumber WhiteSpace+ {return _e;})?
+    EndOfLine* "{" !"}" (WhiteSpace / EndOfLine)*
+    _m:(_m:Method {return _m;} / (WhiteSpace / EndOfLine) {return null;})*
+    "}"
+    {
+        return {
+            type: "class",
+            visibility: _v,
+            name: _n,
+            extends: _e,
+            method: _m
+        }
+    }
+
 Method =
     _jd:JavaDocComment? (WhiteSpace / EndOfLine)*
     _v:VisibilityKeyword WhiteSpace+
     _m:(_m:ModifierKeyword WhiteSpace+ {return _m;})?
     _d:(_d:DataTypeKeyword WhiteSpace+ {return _d;})?
-    _n:Word WhiteSpace*
+    _n:WordNumber WhiteSpace*
     "(" _pl:ParameterList ")"
     (WhiteSpace / EndOfLine)*
     "{" (!"}" .)* "}" !.
@@ -27,6 +45,12 @@ Word =
     _w:[a-zA-Z]+
     {
         return _w.join("");
+    }
+
+WordNumber =
+    _wn:[a-zA-Z0-9]+
+    {
+        return _wn.join("");
     }
 
 Parameter =
@@ -67,7 +91,7 @@ JavaDocComment =
     _p:(
             (!("*/" / JavaDocTag) .)* {return null;}
         /   JavaDocTag
-    )* 
+    )*
     "*/" {return _p;}
 
 JavaDocTag = (
@@ -79,9 +103,10 @@ JavaDocUML =
     "@uml" WhiteSpace+ 
 
 JavaDocParam =
-    "@param" WhiteSpace+ _n:(_n:Word WhiteSpace+ {return _n;})? _d:(!EndOfLine _d:. {return _d;})* EndOfLine
+    "@param" WhiteSpace+ _n:(_n:WordNumber WhiteSpace+ {return _n;})? _d:(!EndOfLine _d:. {return _d;})* EndOfLine
     {
         return {
+            tag: "param",
             name: _n !== "" ? _n : null,
             description: _d.length !== 0 ? _d.join("") : null
         };
@@ -90,7 +115,10 @@ JavaDocParam =
 JavaDocReturn =
     "@return" WhiteSpace+ _d:(!EndOfLine _d:. {return _d;})* EndOfLine
     {
-        return _d.join("");
+        return {
+            tag: "return",
+            description: _d.length !== 0 ? _d.join("") : null
+        };
     }
 
 /*
