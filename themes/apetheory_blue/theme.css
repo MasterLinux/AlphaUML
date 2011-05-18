@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+.dnd {
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
 .Frame {
     background: #f5f5f5;
 }
