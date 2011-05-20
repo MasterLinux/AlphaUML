@@ -7,7 +7,16 @@
 
 .dnd {
     -webkit-user-select: none;
-    cursor: pointer;
+    cursor: default;
+}
+
+.dndTag {
+    padding: 2px;
+    background: #cccccc;
+    z-index:1000;
+    position:absolute;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
 }
 
 .Frame {
@@ -42,7 +51,7 @@
     text-shadow: 1px 1px 0px #b6d9f7;
     font-family: SansationRegular;
     float: left;
-    cursor: pointer;
+    cursor: default;
     -webkit-user-select: none;
 }
 
