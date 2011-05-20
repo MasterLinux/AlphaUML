@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DragAndDrop.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DragAndDrop.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="52" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
+            <state line="174" column="3" selection-start="4115" selection-end="4115" vertical-scroll-proportion="0.2587822">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tab.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tab.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="55" selection-start="4519" selection-end="4519" vertical-scroll-proportion="0.7763466">
+            <state line="18" column="19" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="17" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+            <state line="49" column="19" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,8 +125,8 @@
         <option value="$PROJECT_DIR$/lib/ui/class/Connector.js" />
         <option value="$PROJECT_DIR$/lib/ui/Object.js" />
         <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
-        <option value="$PROJECT_DIR$/lib/ui/util/DragAndDrop.js" />
         <option value="$PROJECT_DIR$/lib/ui/Tab.js" />
+        <option value="$PROJECT_DIR$/lib/ui/util/DragAndDrop.js" />
       </list>
     </option>
   </component>
@@ -156,6 +156,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,17 +218,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="recentsLimit" value="5" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="AlphaUML" serverId="5e8a9808-28e0-4720-820d-00364494b620">
     <servers>
@@ -267,6 +267,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="5e8a9808-28e0-4720-820d-00364494b620" server_name="AlphaUML">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -275,13 +282,6 @@
         </option>
         <option name="ValidateXdebugSetup" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <configuration default="false" name="Main.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" editBeforeRun="true" path="$PROJECT_DIR$/server/Main.php">
       <RunnerSettings RunnerId="PhpRunner" />
@@ -341,7 +341,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1036" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -461,6 +461,11 @@
         <state line="18" column="8" selection-start="388" selection-end="637" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="416" column="47" selection-start="12983" selection-end="12983" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="34" selection-start="212" selection-end="221" vertical-scroll-proportion="0.0" />
@@ -468,28 +473,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="416" column="47" selection-start="12983" selection-end="12983" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="52" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
+        <state line="49" column="19" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="55" selection-start="4519" selection-end="4519" vertical-scroll-proportion="0.7763466">
+        <state line="18" column="19" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="3" selection-start="4115" selection-end="4115" vertical-scroll-proportion="0.2587822">
           <folding />
         </state>
       </provider>
