@@ -35,16 +35,16 @@
       <file leaf-file-name="Tab.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="47" selection-start="6193" selection-end="6193" vertical-scroll-proportion="0.0">
+            <state line="379" column="8" selection-start="10685" selection-end="10695" vertical-scroll-proportion="-175.96">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlphaUML.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AlphaUML.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlphaUML.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="10" selection-start="833" selection-end="833" vertical-scroll-proportion="0.45169082">
+            <state line="22" column="10" selection-start="833" selection-end="833" vertical-scroll-proportion="-14.384615">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="Object.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="433" column="27" selection-start="13270" selection-end="13270" vertical-scroll-proportion="0.0">
+            <state line="459" column="8" selection-start="14023" selection-end="14270" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,16 +71,16 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="5" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+            <state line="39" column="23" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Frame.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Frame.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="65" selection-start="2883" selection-end="2883" vertical-scroll-proportion="0.0">
+            <state line="134" column="8" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.6569087">
               <folding />
             </state>
           </provider>
@@ -89,7 +89,7 @@
       <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="18" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+            <state line="35" column="11" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,6 +135,9 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -148,12 +151,12 @@
         <option value="$PROJECT_DIR$/lib/ui/class/Connector.js" />
         <option value="$PROJECT_DIR$/lib/ui/Object.js" />
         <option value="$PROJECT_DIR$/lib/ui/util/DragAndDrop.js" />
-        <option value="$PROJECT_DIR$/lib/ui/Frame.js" />
         <option value="$PROJECT_DIR$/lib/ui/Content.js" />
-        <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
+        <option value="$PROJECT_DIR$/AlphaUML.html" />
         <option value="$PROJECT_DIR$/lib/Main.js" />
         <option value="$PROJECT_DIR$/lib/ui/Tab.js" />
-        <option value="$PROJECT_DIR$/AlphaUML.html" />
+        <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
+        <option value="$PROJECT_DIR$/lib/ui/Frame.js" />
       </list>
     </option>
   </component>
@@ -207,6 +210,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlphaUML" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlphaUML" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apetheory_blue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,20 +394,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25144842" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4290579" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18576598" sideWeight="0.21339387" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18576598" sideWeight="0.87627697" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18576598" sideWeight="0.737798" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61748016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26220205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.123723045" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26220205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -473,9 +494,18 @@
         <state line="12" column="44" selection-start="201" selection-end="210" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AlphaUML.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="10" selection-start="833" selection-end="833" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="433" column="27" selection-start="13270" selection-end="13270" vertical-scroll-proportion="0.0" />
+        <state line="459" column="8" selection-start="14023" selection-end="14270" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Content.js">
@@ -485,42 +515,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="14" selection-start="1984" selection-end="1984" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
+    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="65" selection-start="2883" selection-end="2883" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+        <state line="39" column="23" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="47" selection-start="6193" selection-end="6193" vertical-scroll-proportion="0.0">
+        <state line="379" column="8" selection-start="10685" selection-end="10695" vertical-scroll-proportion="-175.96">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlphaUML.html">
+    <entry file="file://$PROJECT_DIR$/lib/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="833" selection-end="833" vertical-scroll-proportion="0.45169082">
+        <state line="35" column="11" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="8" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.6569087">
           <folding />
         </state>
       </provider>

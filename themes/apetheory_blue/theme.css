@@ -24,12 +24,40 @@
     background: #f5f5f5;
 }
 
-    .Frame .tabs {
+    .Frame .tabsOuter {
         height: 30px;
         background: url("images/ui/tab_bar_bg.png") repeat-x #dedede;
         -webkit-box-shadow: 0px 1px 1px #3f3f3f;
         margin: 0 0 2px 0;
+        overflow: hidden;
+        position: relative;
     }
+
+        .Frame .tabsOuter .tabsInner {
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            left: 25px;
+            z-index: 1;
+        }
+
+        .Frame .tabsOuter .tabsLeft {
+            height: 100%;
+            width: 20px;
+            background: #ff00ff;
+            position: absolute;
+            left: 0;
+            z-index: 2;
+        }
+
+        .Frame .tabsOuter .tabsRight {
+            height: 100%;
+            width: 20px;
+            background: #ff00ff;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+        }
 
     .Frame .content {
         display: inline-block;
