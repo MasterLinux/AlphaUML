@@ -30,34 +30,31 @@
         -webkit-box-shadow: 0px 1px 1px #3f3f3f;
         margin: 0 0 2px 0;
         overflow: hidden;
-        position: relative;
+        float: left;
     }
 
         .Frame .tabsOuter .tabsInner {
             height: 100%;
             overflow: hidden;
-            position: absolute;
-            left: 25px;
-            z-index: 1;
         }
 
-        .Frame .tabsOuter .tabsLeft {
-            height: 100%;
-            width: 20px;
-            background: #ff00ff;
-            position: absolute;
-            left: 0;
-            z-index: 2;
-        }
+    .Frame .tabsLeft {
+        height: 30px;
+        width: 20px;
+        background: #ff00ff;
+        float: left;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
 
-        .Frame .tabsOuter .tabsRight {
-            height: 100%;
-            width: 20px;
-            background: #ff00ff;
-            position: absolute;
-            right: 0;
-            z-index: 2;
-        }
+    .Frame .tabsRight {
+        height: 30px;
+        width: 20px;
+        background: #ff00ff;
+        float: left;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+    }
 
     .Frame .content {
         display: inline-block;

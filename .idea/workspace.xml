@@ -62,7 +62,16 @@
       <file leaf-file-name="Object.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="459" column="8" selection-start="14023" selection-end="14270" vertical-scroll-proportion="0.0">
+            <state line="459" column="19" selection-start="14034" selection-end="14034" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeList-fx.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frameworks/dojo/NodeList-fx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="2" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +80,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="23" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
+            <state line="54" column="34" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +89,7 @@
       <file leaf-file-name="Frame.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="8" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.6569087">
+            <state line="165" column="41" selection-start="4681" selection-end="4681" vertical-scroll-proportion="0.81615925">
               <folding />
             </state>
           </provider>
@@ -454,11 +463,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frameworks/ace/cockpit-uncompressed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.020906" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java.pegjs">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="20" selection-start="628" selection-end="628" vertical-scroll-proportion="0.019906323" />
@@ -501,35 +505,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="459" column="8" selection-start="14023" selection-end="14270" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Content.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="12" selection-start="3669" selection-end="3669" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="14" selection-start="1984" selection-end="1984" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="23" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="379" column="8" selection-start="10685" selection-end="10695" vertical-scroll-proportion="-175.96">
           <folding />
         </state>
       </provider>
@@ -541,9 +519,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="379" column="8" selection-start="10685" selection-end="10695" vertical-scroll-proportion="-175.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="34" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="14" selection-start="1984" selection-end="1984" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="459" column="19" selection-start="14034" selection-end="14034" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/dojo/NodeList-fx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="2" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="8" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.6569087">
+        <state line="165" column="41" selection-start="4681" selection-end="4681" vertical-scroll-proportion="0.81615925">
           <folding />
         </state>
       </provider>
