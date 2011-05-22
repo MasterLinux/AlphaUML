@@ -7,6 +7,7 @@
 
 .dnd {
     -webkit-user-select: none;
+    -moz-user-select: none;
     cursor: default;
 }
 
@@ -53,6 +54,7 @@
     float: left;
     cursor: default;
     -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
     .Tab .button {
