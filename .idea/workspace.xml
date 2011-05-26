@@ -29,7 +29,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="24" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5580589">
+            <state line="37" column="46" selection-start="717" selection-end="717" vertical-scroll-proportion="0.9116118">
               <folding />
             </state>
           </provider>
@@ -139,6 +139,7 @@
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
     <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
     <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
     <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
@@ -574,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5580589">
+        <state line="37" column="46" selection-start="717" selection-end="717" vertical-scroll-proportion="0.9116118">
           <folding />
         </state>
       </provider>

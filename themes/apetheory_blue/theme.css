@@ -15,7 +15,6 @@ ul.tree {
 
     li:hover.Folder .title {
         background: #cccccc;
-        padding: 0 2px;
     }
 
         li.Folder .icon {
