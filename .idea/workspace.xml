@@ -23,15 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Content.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ui/Content.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,16 +44,7 @@
       <file leaf-file-name="AlphaUML.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlphaUML.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="745" selection-end="745" vertical-scroll-proportion="-9.884615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AIRIntrospector.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frameworks/air/AIRIntrospector.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="26" column="9" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +53,7 @@
       <file leaf-file-name="Window.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/Window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="6" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
+            <state line="58" column="45" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +62,7 @@
       <file leaf-file-name="FileBrowser.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/FileBrowser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="26" selection-start="6590" selection-end="6590" vertical-scroll-proportion="0.08186196">
+            <state line="318" column="3" selection-start="8375" selection-end="8375" vertical-scroll-proportion="0.019859813">
               <folding />
             </state>
           </provider>
@@ -98,7 +80,7 @@
       <file leaf-file-name="AIRAliases.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frameworks/air/AIRAliases.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="11" selection-start="1319" selection-end="1322" vertical-scroll-proportion="116.16">
+            <state line="36" column="11" selection-start="1319" selection-end="1322" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,127 +135,9 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/ui/textinput/Button.js" />
         <option value="$PROJECT_DIR$/lib/ui/class/Connector.js" />
         <option value="$PROJECT_DIR$/lib/ui/util/DragAndDrop.js" />
         <option value="$PROJECT_DIR$/lib/ui/Content.js" />
@@ -285,9 +149,10 @@
         <option value="$PROJECT_DIR$/lib/ui/content/FileBrowser.js" />
         <option value="$PROJECT_DIR$/lib/ui/Window.js" />
         <option value="$PROJECT_DIR$/lib/Main.js" />
-        <option value="$PROJECT_DIR$/AlphaUML.html" />
         <option value="$PROJECT_DIR$/lib/ui/Object.js" />
         <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/AlphaUML.html" />
         <option value="$PROJECT_DIR$/lib/ui/FileBrowser.js" />
       </list>
     </option>
@@ -310,7 +175,7 @@
       <flattenPackages />
       <showMembers />
       <showModules />
-      <showLibraryContents ProjectPane="false" />
+      <showLibraryContents ProjectPane="true" />
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
@@ -318,6 +183,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -326,10 +192,6 @@
               <option name="myItemId" value="AlphaUML" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -338,28 +200,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AlphaUML" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apetheory_blue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,17 +249,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
+              <option name="myItemId" value="parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
+              <option name="myItemId" value="language" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,11 +293,13 @@
   <component name="RunManager" selected="PHP Script.Main.php">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <method>
+        <option name="PhingTarget" enabled="false" />
         <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method>
+        <option name="PhingTarget" enabled="false" />
         <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
@@ -467,7 +308,9 @@
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
-      <method />
+      <method>
+        <option name="PhingTarget" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="5e8a9808-28e0-4720-820d-00364494b620" server_name="AlphaUML">
       <method>
@@ -475,6 +318,7 @@
           <server_id />
           <server_name />
         </option>
+        <option name="PhingTarget" enabled="false" />
         <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
@@ -483,7 +327,9 @@
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
-      <method />
+      <method>
+        <option name="PhingTarget" enabled="false" />
+      </method>
     </configuration>
     <configuration default="false" name="Main.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" editBeforeRun="true" path="$PROJECT_DIR$/server/Main.php">
       <RunnerSettings RunnerId="PhpRunner" />
@@ -500,6 +346,8 @@
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
     <option name="LAST_MERGED_REVISION" />
     <option name="MERGE_DRY_RUN" value="false" />
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
@@ -544,16 +392,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25144842" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20144753" sideWeight="0.19523269" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18187386" sideWeight="0.42695355" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20144753" sideWeight="0.5334847" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18187386" sideWeight="0.5639864" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61748016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26220205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -562,11 +410,21 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31441543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
@@ -578,6 +436,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -608,16 +467,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ui/util/DragAndDrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="31" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Tab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="438" column="8" selection-start="12675" selection-end="12944" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="438" column="8" selection-start="12675" selection-end="12944" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Frame.js">
@@ -627,72 +479,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/TabBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="345" column="30" selection-start="9672" selection-end="9672" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="345" column="30" selection-start="9672" selection-end="9672" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/util/Size.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="4" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="34" column="4" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/content/FileBrowser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="0" selection-end="260" vertical-scroll-proportion="0.49117175">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlphaUML.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="745" selection-end="745" vertical-scroll-proportion="-9.884615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/content/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="11" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/air/AIRIntrospector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="6" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/air/AIRAliases.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="11" selection-start="1319" selection-end="1322" vertical-scroll-proportion="116.16">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="470" column="8" selection-start="14405" selection-end="14741" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="0" selection-start="0" selection-end="260" vertical-scroll-proportion="0.49117175" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/Content.js">
@@ -700,18 +497,51 @@
         <state line="25" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/air/AIRIntrospector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.15097691" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="5" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="48" column="5" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="470" column="8" selection-start="14405" selection-end="14741" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlphaUML.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="9" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="45" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/FileBrowser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="26" selection-start="6590" selection-end="6590" vertical-scroll-proportion="0.08186196">
+        <state line="318" column="3" selection-start="8375" selection-end="8375" vertical-scroll-proportion="0.019859813">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/content/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="11" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/air/AIRAliases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="11" selection-start="1319" selection-end="1322" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="4" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
   </component>
