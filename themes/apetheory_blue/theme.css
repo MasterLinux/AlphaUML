@@ -8,13 +8,10 @@
 ul.tree {
     margin: 1px 0 1px 10px;
     list-style: none;
+    -webkit-user-select: none;
 }
     ul.tree li {
         overflow-y: hidden;
-    }
-
-    li:hover.Folder .title {
-        background: #cccccc;
     }
 
         li.Folder .icon {
@@ -52,26 +49,39 @@ ul.tree {
 
         li.Folder .title {
             height: 18px;
-            padding: 1px 0 0 0;
+            padding: 1px 1px 0 1px;
             font-size: 14px;
             float: left;
             -webkit-user-select: none;
             cursor: default;
         }
 
-    li.File .icon.java {
+li.File.selected .title {
+    background: #cccccc;
+}
+
+    li.File .icon {
         width: 19px;
         height: 18px;
         margin: 1px 2px 0 40px;
-        background: url("images/icons/java.png") no-repeat;
         float: left;
     }
 
+        li.File .icon.java {
+            background: url("images/icons/java.png") no-repeat;
+        }
+
+        li.File .icon.txt {
+            background: url("images/icons/txt.png") no-repeat;
+        }
+
     li.File .title {
         height: 18px;
-        padding: 1px 0 0 0;
+        padding: 1px 1px 0 1px;
         font-size: 14px;
         float: left;
+        -webkit-user-select: none;
+        cursor: default;
     }
 
 .dnd {
