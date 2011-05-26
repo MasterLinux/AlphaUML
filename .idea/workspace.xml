@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/lib/ui/FileBrowser.js" line="266" mnemonic="5" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="db8f2a2f-a659-42b0-8288-e193aff5d297" name="Default" comment="" />
     <ignored path="AlphaUML.iws" />
@@ -23,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="theme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="5" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
+            <state line="25" column="24" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5580589">
               <folding />
             </state>
           </provider>
@@ -59,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileBrowser.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileBrowser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/FileBrowser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="318" column="3" selection-start="8375" selection-end="8375" vertical-scroll-proportion="0.019859813">
+            <state line="277" column="50" selection-start="7593" selection-end="7593" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,6 +138,31 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -150,10 +178,10 @@
         <option value="$PROJECT_DIR$/lib/ui/Window.js" />
         <option value="$PROJECT_DIR$/lib/Main.js" />
         <option value="$PROJECT_DIR$/lib/ui/Object.js" />
-        <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/AlphaUML.html" />
         <option value="$PROJECT_DIR$/lib/ui/FileBrowser.js" />
+        <option value="$PROJECT_DIR$/themes/apetheory_blue/theme.css" />
       </list>
     </option>
   </component>
@@ -397,11 +425,12 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25144842" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18187386" sideWeight="0.42695355" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18187386" sideWeight="0.29204544" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18187386" sideWeight="0.5639864" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18187386" sideWeight="0.38522726" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61748016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31363636" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -410,7 +439,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31441543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -502,36 +530,9 @@
         <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.15097691" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="5" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="470" column="8" selection-start="14405" selection-end="14741" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AlphaUML.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="9" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/Window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="45" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/FileBrowser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="318" column="3" selection-start="8375" selection-end="8375" vertical-scroll-proportion="0.019859813">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/content/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="11" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/air/AIRAliases.js">
@@ -542,6 +543,40 @@
     <entry file="file://$PROJECT_DIR$/lib/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="4" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="45" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/Object.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="470" column="8" selection-start="14405" selection-end="14741" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/content/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="11" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/FileBrowser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="277" column="50" selection-start="7593" selection-end="7593" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/images/icons/fold.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/apetheory_blue/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="24" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5580589">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

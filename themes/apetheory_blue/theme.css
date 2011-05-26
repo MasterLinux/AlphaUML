@@ -14,7 +14,8 @@ ul.tree {
     }
 
     li:hover.Folder .title {
-        background: #ededed;
+        background: #cccccc;
+        padding: 0 2px;
     }
 
         li.Folder .icon {
@@ -25,12 +26,29 @@ ul.tree {
             float: left;
         }
 
-        li.Folder .expand {
+        li.Folder .expand,
+        li.Folder .fold {
             width: 18px;
             height: 18px;
             margin: 1px 0;
-            background: url("images/icons/expand.png") no-repeat;
             float: left;
+            cursor: pointer;
+        }
+
+        li.Folder .expand {
+            background: url("images/icons/expand.png") no-repeat;
+        }
+
+        li.Folder .expand:hover {
+            background: url("images/icons/expand_hover.png") no-repeat;
+        }
+
+        li.Folder .fold {
+            background: url("images/icons/fold.png") no-repeat;
+        }
+
+        li.Folder .fold:hover {
+            background: url("images/icons/fold_hover.png") no-repeat;
         }
 
         li.Folder .title {
@@ -38,6 +56,8 @@ ul.tree {
             padding: 1px 0 0 0;
             font-size: 14px;
             float: left;
+            -webkit-user-select: none;
+            cursor: default;
         }
 
     li.File .icon.java {
