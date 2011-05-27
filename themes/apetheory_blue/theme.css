@@ -14,6 +14,10 @@ ul.tree {
         overflow-y: hidden;
     }
 
+    li.Folder.selected .title {
+        background: #cccccc;
+    }
+
         li.Folder .icon {
             width: 28px;
             height: 18px;
