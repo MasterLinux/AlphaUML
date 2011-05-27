@@ -243,3 +243,47 @@ li.File.selected .title {
         .Tab .close:hover {
             background: url("images/ui/tab_close.png");
         }
+
+.HMenu {
+    height: 24px;
+    background: #ededed;
+    list-style: none;
+}
+
+.HMenuBtn {
+    padding: 0 2px;
+}
+
+    .HMenuBtn .title {
+        height: 20px;
+        margin: 2px 2px 0 2px;
+        padding: 0 2px;
+        font-size: 18px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .HMenuBtn:hover .title {
+        background: #cccccc;
+    }
+
+.HMenuDropDown {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    list-style: none;
+}
+
+.HMenuDropDownBtn {
+    
+}
+    .HMenuDropDownBtn .title {
+        height: 18px;
+        margin: 2px 1px 0 1px;
+        font-size: 16px;
+        float: none;
+    }
+
+    .HMenuDropDownBtn:hover .title {
+        background: #cccccc;
+    }
