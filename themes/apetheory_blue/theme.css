@@ -141,11 +141,10 @@ li.File.selected .title {
 }
 
     .Frame .content {
-        display: inline-block;
         position: relative;
     }
 
-        .Frame .content #codeEditor {
+        .Frame .content .Editor {
             position: absolute;
             margin: 0;
             top: 0;
