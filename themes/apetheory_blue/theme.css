@@ -153,6 +153,20 @@ li.File.selected .title {
             right: 0;
         }
 
+.FrameBorder {
+    background: none;
+    position: absolute;
+    z-index: 100;
+}
+
+    .FrameBorder:hover {
+        cursor: pointer;
+    }
+
+    .FrameBorder.active {
+        background: rgba(100, 100, 100, 0.5);
+    }
+
 .TabBar {
     height: 30px;
 }
