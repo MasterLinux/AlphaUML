@@ -1,0 +1,10 @@
+{
+    "resolution": {
+        "width": 1024,
+        "height": 768
+    },
+    "frames": {
+        "leftWidth": 200,
+        "bottomHeight": 200
+    }
+}
