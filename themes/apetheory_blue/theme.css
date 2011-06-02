@@ -297,9 +297,10 @@ li.File.selected .title {
 
 .HMenuDropDown {
     position: absolute;
-    top: 30px;
-    left: 30px;
     list-style: none;
+    z-index: 2000;
+    background: #ededed;
+    border: 1px solid #1f1f1f;
 }
 
 .HMenuDropDownBtn {
@@ -310,6 +311,8 @@ li.File.selected .title {
         margin: 2px 1px 0 1px;
         font-size: 16px;
         float: none;
+        cursor: pointer;
+        webkit-user-select: none;
     }
 
     .HMenuDropDownBtn:hover .title {
