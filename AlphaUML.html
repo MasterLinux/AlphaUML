@@ -3,37 +3,42 @@
 <html>
 <head>
     <title>AlphaUML</title>
-    <script type="text/javascript" src="frameworks/air/AIRAliases.js"></script>
-    <script type="text/javascript" src="frameworks/Parser.js"></script>
-    <script type="text/javascript" src="frameworks/ace/ace.js" charset="utf-8"></script>
-    <script type="text/javascript" src="frameworks/ace/theme-eclipse.js" charset="utf-8"></script>
-    <script type="text/javascript" src="frameworks/ace/mode-java.js" charset="utf-8"></script>
-    
-    <script type="text/javascript">
-        /*
-        var console = console || {
-            debug: function(){}
-        };*/
 
+    <link href="themes/apetheory_blue/theme.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript">
         var djConfig = {
             parseOnLoad: true,
             debugAtAllCosts: true
         };
-
-        //console.debug(Parser.parse("3*(5+5)"));
     </script>
 
-
-    <script type="text/javascript" src="frameworks/dojo/dojo.js"></script>
-    <script type="text/javascript" src="lib/Main.js"></script>
+    <script type="text/javascript" src="frameworks/air/AIRAliases.js"></script>
     <script type="text/javascript" src="frameworks/air/AIRIntrospector.js"></script>
 
-    <link href="themes/apetheory_blue/theme.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="frameworks/dojo/dojo.js"></script>
+
+    <script type="text/javascript" src="frameworks/ace/ace.js" charset="utf-8"></script>
+    <script type="text/javascript" src="frameworks/ace/theme-eclipse.js" charset="utf-8"></script>
+    <script type="text/javascript" src="frameworks/ace/mode-java.js" charset="utf-8"></script>
+    
+
+
+
+
+
+    <script type="text/javascript">
+        console.debug(dojo);
+    </script>
+
+    <script type="text/javascript" src="lib/Main.js"></script>
+
+
+
 
 
 </head>
 <body id="main">
     <div id="testTabBarDiv"></div>
-
 </body> 
 </html>
