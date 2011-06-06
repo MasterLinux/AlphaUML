@@ -3,13 +3,26 @@
  * as a parser expression grammar
  */
 
+ start =
+    _m:(_m:Method {return _m;} / _v:Variable {return _v;} / WhiteSpace {return "";} / EndOfLine {return "";})* !.
+    {
+        var result = [];
+        for (var i = 0; i < _m.length; i++) {
+            if(_m[i] != "") {
+                result.push(_m[i]);
+            }
+        }
+
+        return result;
+    }
+
 Class =
     _v:VisibilityKeyword WhiteSpace+
-    "class" WhiteSpace+
+    Keyword WhiteSpace+
     _n:WordNumber WhiteSpace+
     _e:("extends" WhiteSpace+ _e:WordNumber WhiteSpace+ {return _e;})?
-    EndOfLine* "{" !"}" (WhiteSpace / EndOfLine)*
-    _m:(_m:Method {return _m;} / (WhiteSpace / EndOfLine) {return null;})*
+    __ "{" __
+    _m:(!"}" _m:Method {return _m;} /!"}" __ {return null;} /!"}" .* {return null;})*
     "}"
     {
         return {
@@ -29,16 +42,36 @@ Method =
     _n:WordNumber WhiteSpace*
     "(" _pl:ParameterList ")"
     (WhiteSpace / EndOfLine)*
-    "{" (!"}" .)* "}" !.
+    "{" (!"}" .)* "}"
     {
         return {
+            type: "method",
             javaDoc: _jd !== "" ? _jd : null,
             name: _n,
             visibility:  _v,
             modifier: _m !== "" ? _m : null,
             dataType: _d !== "" ? _d : "constructor",
             parameter: _pl
-        }
+        };
+    }
+
+Variable =
+    _jd:JavaDocComment? (WhiteSpace / EndOfLine)*
+    _v:VisibilityKeyword WhiteSpace+
+    _m:(_m:ModifierKeyword WhiteSpace+ {return _m;})?
+    _d:WordNumber WhiteSpace+
+    _n:WordNumber WhiteSpace*
+    _val:("=" _v:(!";" _v:. {return _v;})* {return _v;})? ";"
+    {
+        return {
+            type: "variable",
+            javaDoc: _jd !== "" ? _jd : null,
+            name: _n,
+            visibility:  _v,
+            modifier: _m !== "" ? _m : null,
+            dataType: _d,
+            value: _val !== "" ? _val.join("") : null
+        };
     }
 
 Word =
@@ -82,6 +115,9 @@ EndOfLine
   / "\r"
   / "\u2028" // line spearator
   / "\u2029" // paragraph separator
+
+__
+    = (WhiteSpace / EndOfLine)*
 
 /*
  * comments

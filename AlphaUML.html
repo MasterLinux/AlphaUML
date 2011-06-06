@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>AlphaUML</title>
+    <!--
 
     <link href="themes/apetheory_blue/theme.css" type="text/css" rel="stylesheet" />
 
@@ -21,22 +22,40 @@
     <script type="text/javascript" src="frameworks/ace/ace.js" charset="utf-8"></script>
     <script type="text/javascript" src="frameworks/ace/theme-eclipse.js" charset="utf-8"></script>
     <script type="text/javascript" src="frameworks/ace/mode-java.js" charset="utf-8"></script>
-    
 
+    <script type="text/javascript" src="lib/Main.js"></script> -->
 
-
-
-
+    <script type="text/javascript" src="frameworks/dojo_dep/dojo.js"></script>
+    <script type="text/javascript" src="frameworks/peg.js"></script>
     <script type="text/javascript">
-        console.debug(dojo);
+        dojo.xhrGet({
+            url: "java.pegjs",
+            handleAs: "text",
+            load: dojo.hitch(this, function(grammar) {
+                //get source code
+                dojo.xhrGet({
+                    url: "bsp.java",
+                    handleAs: "text",
+                    load: dojo.hitch(this, function(java) {
+                        //create parser
+                        var parser = PEG.buildParser(grammar);
+                        var result = parser.parse(java);
+
+                        console.debug(result);
+                    }),
+                    error: function(error) {
+                        console.debug("java: " + error);
+                    }
+                });
+            }),
+            error: function(error) {
+                console.debug("grammer: " + error);
+            }
+        });
+
+
+
     </script>
-
-    <script type="text/javascript" src="lib/Main.js"></script>
-
-
-
-
-
 </head>
 <body id="main">
     <div id="testTabBarDiv"></div>
