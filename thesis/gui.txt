@@ -1,0 +1,18 @@
+Introduction
+The graphical user interface (gui) is based on the DojoToolkit (http://dojotoolkit.org/) and use the base api of it.
+The gui is fully developed with the provided object oriented concept of Dojo, like the class system, the package system or the possibility of inheritance.
+The programmatically approach of gui development is one of the important points of this gui framework.
+It isn't possible to create gui elements with HTML, like the dijit api (http://dojotoolkit.org/reference-guide/dijit/index.html) of dojo.
+So developer have to create a gui with this framework programmatically.
+The following code snippet is an example of creating a tab with HTML content:
+
+var tab = new ui.Tab({
+    title: "Class Diagram",
+    content: new ui.Content({
+        content: '<div>Some Text</div>'
+    })
+});
+
+Each gui element has a constructor with a JSON object as a parameter with different possible properties. But some properties are declared in the base class of gui objects.
+That super class is called ui.Object and provides a lot of functions for the manually garbage collection or for example the creation of a unique id for each object.
+Furthermore it manages the handling of events.
