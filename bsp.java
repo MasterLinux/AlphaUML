@@ -1,15 +1,37 @@
+/**
+ * @(#)Blah.java        1.82 99/03/18
+ *
+ * Copyright (c) 1994-1999 Sun Microsystems, Inc.
+ * 901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of Sun
+ * Microsystems, Inc. ("Confidential Information").  You shall not
+ * disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into
+ * with Sun.
+ @param sw wewe
+ */
+
+//test test test test
+public class Blah extends SomeClass {
+    /** A class implementation comment can go here. */
+    public static int classVar0 = 42;
+    public float testVar = 23.3;
+    public static String classVar007 = "wusa";
+    public String testVar007 = 'wusa2';
 
     /** classVar1 documentation comment */
     public static int classVar1;
 
-    /**
+    /** 
      * classVar2 documentation comment that happens to be
      * more than one line long
      */
     private static Object classVar2;
 
     /** instanceVar1 documentation comment */
-    public Object instanceVar1 = test;
+    public Object instanceVar1;
 
     /** instanceVar2 documentation comment */
     protected int instanceVar2;
@@ -17,7 +39,7 @@
     /** instanceVar3 documentation comment */
     private Object instanceVar3;
 
-    /**
+    /** 
      * ...constructor Blah documentation comment...
      */
     public Blah() {
@@ -28,7 +50,7 @@
      * ...method doSomething documentation comment...
      */
     public void doSomething() {
-        // ...implementation goes here...
+        // ...implementation goes here... 
     }
 
     /**
@@ -36,5 +58,8 @@
      * @param someParam description
      */
     public void doSomethingElse(Object someParam) {
-        // ...implementation goes here...
+        // ...implementation goes here... 
     }
+}
+
+//wewewewe

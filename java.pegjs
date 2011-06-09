@@ -3,102 +3,112 @@
  * as a parser expression grammar
  */
 
- start =
-    _m:(_m:Method {return _m;} / _v:Variable {return _v;} / WhiteSpace {return "";} / EndOfLine {return "";})* !.
+start = __ Class+ __ !.
+
+Class =
+    $jd:JavaDocComment? __
+    $v:VisibilityKeyword __
+    Keyword __
+    $n:WordNumber __
+    $e:("extends" __ $e:WordNumber __ {return $e;})?
+    "{" __
+    $m:InnerClass
+    "}"
+    {
+        return {
+            type: "class",
+            javaDoc: $jd !== "" ? $jd : null,
+            visibility: $v,
+            name: $n,
+            extends: $e,
+            method: $m
+        }
+    }
+
+InnerClass =
+    $m:($m:Method {return $m;} / $v:Variable {return $v;} / WhiteSpace {return "";} / EndOfLine {return "";})*
     {
         var result = [];
-        for (var i = 0; i < _m.length; i++) {
-            if(_m[i] != "") {
-                result.push(_m[i]);
+        for (var i = 0; i < $m.length; i++) {
+            if($m[i] != "") {
+                result.push($m[i]);
             }
         }
 
         return result;
     }
 
-Class =
-    _v:VisibilityKeyword WhiteSpace+
-    Keyword WhiteSpace+
-    _n:WordNumber WhiteSpace+
-    _e:("extends" WhiteSpace+ _e:WordNumber WhiteSpace+ {return _e;})?
-    __ "{" __
-    _m:(!"}" _m:Method {return _m;} /!"}" __ {return null;} /!"}" .* {return null;})*
-    "}"
-    {
-        return {
-            type: "class",
-            visibility: _v,
-            name: _n,
-            extends: _e,
-            method: _m
-        }
-    }
-
 Method =
-    _jd:JavaDocComment? (WhiteSpace / EndOfLine)*
-    _v:VisibilityKeyword WhiteSpace+
-    _m:(_m:ModifierKeyword WhiteSpace+ {return _m;})?
-    _d:(_d:DataTypeKeyword WhiteSpace+ {return _d;})?
-    _n:WordNumber WhiteSpace*
-    "(" _pl:ParameterList ")"
-    (WhiteSpace / EndOfLine)*
+    $jd:JavaDocComment? __
+    $v:VisibilityKeyword __
+    $m:($m:ModifierKeyword __ {return $m;})?
+    $d:($d:DataTypeKeyword __ {return $d;})?
+    $n:WordNumber __
+    "(" $pl:ParameterList ")" __
     "{" (!"}" .)* "}"
     {
         return {
             type: "method",
-            javaDoc: _jd !== "" ? _jd : null,
-            name: _n,
-            visibility:  _v,
-            modifier: _m !== "" ? _m : null,
-            dataType: _d !== "" ? _d : "constructor",
-            parameter: _pl
+            javaDoc: $jd !== "" ? $jd : null,
+            name: $n,
+            visibility:  $v,
+            modifier: $m !== "" ? $m : null,
+            dataType: $d !== "" ? $d : "constructor",
+            parameter: $pl
         };
     }
 
 Variable =
-    _jd:JavaDocComment? (WhiteSpace / EndOfLine)*
-    _v:VisibilityKeyword WhiteSpace+
-    _m:(_m:ModifierKeyword WhiteSpace+ {return _m;})?
-    _d:WordNumber WhiteSpace+
-    _n:WordNumber WhiteSpace*
-    _val:("=" _v:(!";" _v:. {return _v;})* {return _v;})? ";"
+    $jd:JavaDocComment? __
+    $v:VisibilityKeyword __
+    $m:($m:ModifierKeyword __ {return $m;})?
+    $d:WordNumber __
+    $n:WordNumber __
+    $val:("=" __ $v:(!";" $v:. {return $v;})* {return $v;})? ";"
     {
+        //get value if exists and remove each existing quote
+        var value = $val !== "" ? $val.join("").replace(/"/g, "").replace(/'/g, "") : null
+
+        //convert the value of int and float datatypes to a number
+        if(value) if($d == "int") value = parseInt(value);
+        if(value) if($d == "float") value = parseFloat(value);
+        
         return {
             type: "variable",
-            javaDoc: _jd !== "" ? _jd : null,
-            name: _n,
-            visibility:  _v,
-            modifier: _m !== "" ? _m : null,
-            dataType: _d,
-            value: _val !== "" ? _val.join("") : null
+            javaDoc: $jd !== "" ? $jd : null,
+            name: $n,
+            visibility:  $v,
+            modifier: $m !== "" ? $m : null,
+            dataType: $d,
+            value: value
         };
     }
 
 Word =
-    _w:[a-zA-Z]+
+    $w:[a-zA-Z]+
     {
-        return _w.join("");
+        return $w.join("");
     }
 
 WordNumber =
-    _wn:[a-zA-Z0-9]+
+    $wn:[a-zA-Z0-9]+
     {
-        return _wn.join("");
+        return $wn.join("");
     }
 
 Parameter =
-    _d:(DataTypeKeyword/Word) WhiteSpace+ _n:Word
+    $d:(DataTypeKeyword/Word) __ $n:Word
     {
         return {
-            dataType: _d,
-            name: _n
+            dataType: $d,
+            name: $n
         } 
     }
 
 ParameterList = (
-    WhiteSpace* _p:Parameter WhiteSpace* ","? WhiteSpace*
+    __ $p:Parameter __ ","? __
     {
-        return _p
+        return $p
     }
 )*
 
@@ -117,18 +127,33 @@ EndOfLine
   / "\u2029" // paragraph separator
 
 __
-    = (WhiteSpace / EndOfLine)*
+    = (WhiteSpace / EndOfLine / MultiLineComment / SingleLineComment)*
 
 /*
  * comments
  */
+MultiLineComment =
+    !"/**" "/*" (!"*/" .)* "*/"
+    {
+        return null;
+    }
+
+SingleLineComment =
+    "//" (!EndOfLine .)* EndOfLine
+    {
+        return null;
+    }
+
 JavaDocComment =
     "/**"
-    _p:(
+    $p:(
             (!("*/" / JavaDocTag) .)* {return null;}
         /   JavaDocTag
     )*
-    "*/" {return _p;}
+    "*/"
+    {
+        return $p;
+    }
 
 JavaDocTag = (
         JavaDocParam
@@ -139,21 +164,21 @@ JavaDocUML =
     "@uml" WhiteSpace+ 
 
 JavaDocParam =
-    "@param" WhiteSpace+ _n:(_n:WordNumber WhiteSpace+ {return _n;})? _d:(!EndOfLine _d:. {return _d;})* EndOfLine
+    "@param" WhiteSpace+ $n:($n:WordNumber WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
     {
         return {
             tag: "param",
-            name: _n !== "" ? _n : null,
-            description: _d.length !== 0 ? _d.join("") : null
+            name: $n !== "" ? $n : null,
+            description: $d.length !== 0 ? $d.join("") : null
         };
     }
 
 JavaDocReturn =
-    "@return" WhiteSpace+ _d:(!EndOfLine _d:. {return _d;})* EndOfLine
+    "@return" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
     {
         return {
             tag: "return",
-            description: _d.length !== 0 ? _d.join("") : null
+            description: $d.length !== 0 ? $d.join("") : null
         };
     }
 
