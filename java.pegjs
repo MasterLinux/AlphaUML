@@ -17,7 +17,7 @@ Class =
     {
         return {
             type: "class",
-            javaDoc: $jd !== "" ? $jd : null,
+            javaDoc: $jd,
             visibility: $v,
             name: $n,
             extends: $e,
@@ -26,12 +26,24 @@ Class =
     }
 
 InnerClass =
-    $m:($m:Method {return $m;} / $v:Variable {return $v;} / WhiteSpace {return "";} / EndOfLine {return "";})*
+    $m:(Method / Variable / WhiteSpace {return "";} / EndOfLine {return "";})*
     {
-        var result = [];
+        var result = {};
         for (var i = 0; i < $m.length; i++) {
-            if($m[i] != "") {
-                result.push($m[i]);
+            //add variables
+            if($m[i].type == "variable") {
+                //if variable array doesn't exists create once
+                if(!result["variable"]) result["variable"] = [];
+                //push variable into array
+                result.variable.push($m[i]);
+            }
+
+            //add methods
+            else if($m[i].type == "method") {
+                //if method array doesn't exists create once
+                if(!result["method"]) result["method"] = [];
+                //push variable into array
+                result.method.push($m[i]);
             }
         }
 
@@ -49,7 +61,7 @@ Method =
     {
         return {
             type: "method",
-            javaDoc: $jd !== "" ? $jd : null,
+            javaDoc: $jd,
             name: $n,
             visibility:  $v,
             modifier: $m !== "" ? $m : null,
@@ -75,7 +87,7 @@ Variable =
         
         return {
             type: "variable",
-            javaDoc: $jd !== "" ? $jd : null,
+            javaDoc: $jd,
             name: $n,
             visibility:  $v,
             modifier: $m !== "" ? $m : null,
@@ -152,7 +164,27 @@ JavaDocComment =
     )*
     "*/"
     {
-        return $p;
+        var index = 0;
+        var comment = {};
+        //format array to an more readable object
+        for(var i=0; i<$p.length; i++) {
+            //add param object
+            if($p[i].tag == "param") {
+                ++index;
+                //create param array if doesn't exists
+                if(!comment["param"]) comment["param"] = [];
+                //push object into array
+                comment.param.push($p[i]);
+            }
+            //add return object
+            else if($p[i].tag == "return") {
+                ++index;
+                //return is only allowed once
+                comment["return"] = $p[i];
+            }
+        }
+
+        return index == 0 ? null : comment;
     }
 
 JavaDocTag = (

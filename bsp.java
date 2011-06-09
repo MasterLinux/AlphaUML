@@ -56,6 +56,8 @@ public class Blah extends SomeClass {
     /**
      * ...method doSomethingElse documentation comment...
      * @param someParam description
+     * @param superDude lets have pfun!
+     * @return that's a return description
      */
     public void doSomethingElse(Object someParam) {
         // ...implementation goes here... 
