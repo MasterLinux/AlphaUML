@@ -160,7 +160,9 @@ li.File.selected .title {
     overflow: visible;
 }
 
-    .Frame .content {
+    .Frame .content,
+    .Frame .tabBar,
+    .Frame .contextMenu {
         position: relative;
     }
 
@@ -340,8 +342,6 @@ li.File.selected .title {
     float: left;
     overflow: scroll;
     font-size: 12px;
-    width: 100%;
-    height: 100%;
     background: #000000;
     color: #999999;
 }
@@ -351,3 +351,19 @@ li.File.selected .title {
         padding: 2px;
         min-height: 12px;
     }
+
+.Tools {
+    float: left;
+}
+
+    .Tools .button {
+        float: left;
+        width: 30px;
+        height: 30px;
+        background: #de3ede;
+    }
+
+    .Tools .button:hover {
+        background: #2e32de;
+    }
+
