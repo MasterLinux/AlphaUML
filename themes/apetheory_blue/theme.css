@@ -162,8 +162,13 @@ li.File.selected .title {
 
     .Frame .content,
     .Frame .tabBar,
-    .Frame .contextMenu {
+    .Frame .menu {
         position: relative;
+        float: left;
+    }
+
+    .Frame .menu {
+        background: #999999;
     }
 
         .Frame .content .Editor {
@@ -354,13 +359,15 @@ li.File.selected .title {
 
 .Tools {
     float: left;
+    list-style: none;
 }
 
     .Tools .button {
         float: left;
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         background: #de3ede;
+        cursor: pointer;
     }
 
     .Tools .button:hover {
