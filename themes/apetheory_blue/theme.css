@@ -11,7 +11,7 @@ ul.tree {
     -webkit-user-select: none;
 }
     ul.tree li {
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     li.Folder.selected .title {
@@ -366,11 +366,30 @@ li.File.selected .title {
         float: left;
         width: 24px;
         height: 24px;
-        background: #de3ede;
         cursor: pointer;
     }
 
-    .Tools .button:hover {
-        background: #2e32de;
-    }
+        .Tools .button.search {
+            background: url("images/icons/loupe.png");
+        }
+
+        .Tools .button.search:hover {
+            background: url("images/icons/loupe_hover.png");
+        }
+
+        .Tools .button.fontSizeInc {
+            background: url("images/icons/font_size_inc.png");
+        }
+
+        .Tools .button.fontSizeInc:hover {
+            background: url("images/icons/font_size_inc_hover.png");
+        }
+
+        .Tools .button.fontSizeDec {
+            background: url("images/icons/font_size_dec.png");
+        }
+
+        .Tools .button.fontSizeDec:hover {
+            background: url("images/icons/font_size_dec_hover.png");
+        }
 
