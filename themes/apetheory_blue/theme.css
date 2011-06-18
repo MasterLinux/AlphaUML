@@ -168,7 +168,7 @@ li.File.selected .title {
     }
 
     .Frame .menu {
-        background: #999999;
+        background: url("images/menu_bg.png") repeat-x;
     }
 
         .Frame .content .Editor {
@@ -391,5 +391,13 @@ li.File.selected .title {
 
         .Tools .button.fontSizeDec:hover {
             background: url("images/icons/font_size_dec_hover.png");
+        }
+
+        .Tools .button.save {
+            background: url("images/icons/save.png");
+        }
+
+        .Tools .button.save:hover {
+            background: url("images/icons/save_hover.png");
         }
 
