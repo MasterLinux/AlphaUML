@@ -406,11 +406,30 @@ li.File.selected .title {
     background: rgba(0, 0, 0, 0.4);
     -webkit-border-radius: 5px;
     box-shadow: 1px 1px 1px #1f1f1f;
+    -webkit-user-select: none;
+    cursor: default;
+    float: left;
+}
+
+.Class.selected {
+    background: rgba(15, 79, 17, 0.5);
 }
 
     .Class .inner {
         margin: 5px;
         -webkit-border-radius: 5px;
+        float: left;
+    }
+
+    .Class .toolbar {
+        padding:  0 0 5px 0;
+        float: left;
+        clear: both;
+    }
+
+    .Class .body {
+        float: left;
+        clear: both;
     }
 
     .Class .title {
@@ -418,7 +437,8 @@ li.File.selected .title {
         color: #BABABA;
         -webkit-border-top-left-radius: 5px;
         -webkit-border-top-right-radius: 5px;
-        cursor: default;
+        float: left;
+        clear: both;
     }
 
         .Class .title .name,
@@ -426,7 +446,6 @@ li.File.selected .title {
         .Class .title .stereotype {
             text-align: center;
             padding:  0 4px;
-            -webkit-user-select: none;
         }
 
         .Class .title .name:hover,
@@ -434,6 +453,28 @@ li.File.selected .title {
         .Class .title .stereotype:hover {
             background: #336699;
         }
+
+        .Class .icon {
+            width: 24px;
+            height: 24px;
+            float: left;
+        }
+
+            .Class .icon.pin {
+                background: url("images/icons/pin.png") no-repeat;
+            }
+
+            .Class .icon.pin:hover {
+                background: url("images/icons/pin_hover.png") no-repeat;
+            }
+
+            .Class .icon.drag {
+                background: url("images/icons/drag.png") no-repeat;
+            }
+
+            .Class .icon.drag:hover {
+                background: url("images/icons/drag_hover.png") no-repeat;
+            }
 
 .point {
     width: 15px;
@@ -449,6 +490,7 @@ li.File.selected .title {
     box-shadow: 1px 1px 1px #1f1f1f;
     -webkit-user-select: none;
     cursor: default;
+    z-index: 150;
 }
 
     .ContextMenu .inner {
@@ -490,3 +532,12 @@ li.File.selected .title {
         .ContextMenu .menu .button:hover {
             background: #aaaaaa;
         }
+
+.Icon {
+    width: 24px;
+    height: 24px;
+}
+
+    .Icon.test {
+        background: url("images/icons/font_size_inc.png") no-repeat;
+    }
