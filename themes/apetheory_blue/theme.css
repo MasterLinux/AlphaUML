@@ -401,3 +401,92 @@ li.File.selected .title {
             background: url("images/icons/save_hover.png");
         }
 
+.Class {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 1px #1f1f1f;
+}
+
+    .Class .inner {
+        margin: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    .Class .title {
+        background: #053f70;
+        color: #BABABA;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        cursor: default;
+    }
+
+        .Class .title .name,
+        .Class .title .abstract,
+        .Class .title .stereotype {
+            text-align: center;
+            padding:  0 4px;
+            -webkit-user-select: none;
+        }
+
+        .Class .title .name:hover,
+        .Class .title .abstract:hover,
+        .Class .title .stereotype:hover {
+            background: #336699;
+        }
+
+.point {
+    width: 15px;
+    height: 15px;
+    background: #1f1f1f;
+    position: absolute;
+}
+
+.ContextMenu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 1px #1f1f1f;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+    .ContextMenu .inner {
+        margin: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    .ContextMenu .title {
+        padding: 2px 4px;
+        text-align: center;
+        background: #053f70;
+        color: #ededed;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+    }
+
+    .ContextMenu .menu {
+        list-style: none;
+    }
+
+        .ContextMenu .menu .button {
+            padding: 2px 4px;
+            border-top: solid 1px #ffffff;
+            border-bottom: solid 1px #505050;
+            background: #ededed;
+            color: #1f1f1f;
+        }
+
+        .ContextMenu .menu .button:first-child {
+            border-top: none;
+        }
+
+        .ContextMenu .menu .button:last-child {
+            -webkit-border-bottom-left-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            border-bottom: none;
+        }
+
+        .ContextMenu .menu .button:hover {
+            background: #aaaaaa;
+        }

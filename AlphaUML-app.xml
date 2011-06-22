@@ -3,7 +3,7 @@
     <id>net.apetheory.AlphaUML</id>
     <versionNumber>1.0</versionNumber>
     <filename>AlphaUML</filename>
-    <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+    <supportedProfiles>extendedDesktop desktop</supportedProfiles>
     <initialWindow>
         <content>AlphaUML.html</content>
         <visible>true</visible>
