@@ -405,7 +405,7 @@ li.File.selected .title {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     -webkit-border-radius: 5px;
-    box-shadow: 1px 1px 1px #1f1f1f;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
     -webkit-user-select: none;
     cursor: default;
     float: left;
@@ -430,6 +430,8 @@ li.File.selected .title {
     .Class .body {
         float: left;
         clear: both;
+        background: #f0f0f0;
+        padding: 2px;
     }
 
     .Class .title {
@@ -454,27 +456,80 @@ li.File.selected .title {
             background: #336699;
         }
 
-        .Class .icon {
-            width: 24px;
-            height: 24px;
-            float: left;
+    .Class .icon {
+        width: 24px;
+        height: 24px;
+        float: left;
+    }
+
+        .Class .icon.pin {
+            background: url("images/icons/pin.png") no-repeat;
         }
 
-            .Class .icon.pin {
-                background: url("images/icons/pin.png") no-repeat;
+        .Class .icon.pin:hover {
+            background: url("images/icons/pin_hover.png") no-repeat;
+        }
+
+        .Class .icon.drag {
+            background: url("images/icons/drag.png") no-repeat;
+        }
+
+        .Class .icon.drag:hover {
+            background: url("images/icons/drag_hover.png") no-repeat;
+        }
+
+    .Class .component.icon {
+        width: 24px;
+        height: 24px;
+        float: left;
+    }
+
+        .Class .component.icon.public {
+            background: url("images/icons/public_hover.png") no-repeat;
+        }
+
+        .Class .component.icon.protected {
+            background: url("images/icons/protected_hover.png") no-repeat;
+        }
+
+        .Class .component.icon.private {
+            background: url("images/icons/private_hover.png") no-repeat;
+        }
+
+        .Class .component.icon.package {
+            background: url("images/icons/package_hover.png") no-repeat;
+        }
+
+    .Class .component.text {
+        float: left;
+    }
+
+        .Class .component.text .label {
+            float: left;
+            margin: 0 2px;
+            padding: 2px;
+            color: #1f1f1f;
+        }
+
+            .Class .component.text .label:hover {
+                -webkit-border-radius: 4px;
+                background: #336699;
+                color: #BABABA;
             }
 
-            .Class .icon.pin:hover {
-                background: url("images/icons/pin_hover.png") no-repeat;
-            }
+        .Class .component.text .input {
+            float: left;
+            background: none;
+            border:  none;
+            margin: 2px 4px;
+        }
 
-            .Class .icon.drag {
-                background: url("images/icons/drag.png") no-repeat;
-            }
-
-            .Class .icon.drag:hover {
-                background: url("images/icons/drag_hover.png") no-repeat;
-            }
+        .Class .component.text .input.selected {
+            background: #ffffff;
+            -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+            -webkit-border-radius: 4px;
+            border: 1px solid #aaaaaa;
+        }
 
 .point {
     width: 15px;
@@ -487,7 +542,7 @@ li.File.selected .title {
     position: absolute;
     background: rgba(0, 0, 0, 0.7);
     -webkit-border-radius: 5px;
-    box-shadow: 1px 1px 1px #1f1f1f;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
     -webkit-user-select: none;
     cursor: default;
     z-index: 150;
