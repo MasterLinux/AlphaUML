@@ -434,6 +434,18 @@ li.File.selected .title {
         padding: 2px;
     }
 
+        .Class .body .button {
+            margin: 2px;
+            padding: 2px;
+            background: #b6d9f7;
+            -webkit-border-radius: 4px;
+        }
+
+        .Class .body .button:hover {
+            background: #053f70;
+            color: #f5f5f5;
+        }
+
     .Class .title {
         background: #053f70;
         color: #BABABA;
@@ -503,6 +515,11 @@ li.File.selected .title {
     .Class .component.text {
         float: left;
     }
+
+        .Class .component.text .tag {
+            float: left;
+            padding: 2px 0;
+        }
 
         .Class .component.text .label {
             float: left;
