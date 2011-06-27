@@ -468,6 +468,13 @@ li.File.selected .title {
             background: #336699;
         }
 
+    .Class .operation,
+    .Class .attribute {
+        float: left;
+        width: 100%;
+        clear: both;
+    }
+
     .Class .icon {
         width: 24px;
         height: 24px;
@@ -553,6 +560,11 @@ li.File.selected .title {
     height: 15px;
     background: #1f1f1f;
     position: absolute;
+}
+
+.line {
+    position: absolute;
+    background: #1f1f1f;
 }
 
 .ContextMenu {
