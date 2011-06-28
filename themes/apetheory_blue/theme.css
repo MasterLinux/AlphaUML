@@ -408,7 +408,7 @@ li.File.selected .title {
     -webkit-box-shadow: 1px 1px 1px #1f1f1f;
     -webkit-user-select: none;
     cursor: default;
-    float: left;
+    font-size: 14px;
 }
 
 .Class.selected {
@@ -419,6 +419,7 @@ li.File.selected .title {
         margin: 5px;
         -webkit-border-radius: 5px;
         float: left;
+        clear: both;
     }
 
     .Class .toolbar {
@@ -431,14 +432,20 @@ li.File.selected .title {
         float: left;
         clear: both;
         background: #f0f0f0;
-        padding: 2px;
+        padding: 2px 0;
+        width: 100%;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
     }
 
         .Class .body .button {
-            margin: 2px;
-            padding: 2px;
+            margin: 1px 0;
+            padding: 1px 0;
             background: #b6d9f7;
             -webkit-border-radius: 4px;
+            text-align: center;
+            float: left;
+            width: 100%;
         }
 
         .Class .body .button:hover {
@@ -453,7 +460,13 @@ li.File.selected .title {
         -webkit-border-top-right-radius: 5px;
         float: left;
         clear: both;
+        width: 100%;
     }
+
+        .Class .title .first {
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+        }
 
         .Class .title .name,
         .Class .title .abstract,
@@ -469,10 +482,13 @@ li.File.selected .title {
         }
 
     .Class .operation,
-    .Class .attribute {
+    .Class .attribute,
+    .Class .operations,
+    .Class .attributes {
         float: left;
         width: 100%;
         clear: both;
+        margin: 1px 2px;
     }
 
     .Class .icon {
