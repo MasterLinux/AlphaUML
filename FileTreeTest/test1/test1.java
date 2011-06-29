@@ -1,7 +1,7 @@
 /*
- * @(#)Blah2.java        1.82 99/03/18
+ * @(#)Blah.java        1.82 99/03/18
  *
- * Copyright (c) 1994-1999 Sun Microsystems, Inc.
+ * Copyrightsss (c) 1994-1999 Sun Microsystems, Inc.
  * 901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
  * All rights reserved.
  *
@@ -20,10 +20,10 @@ import java.blah.blahdy.BlahBlah;
 /**
  * Class description goes here.
  *
- * @version     1.82 18 Mar 1999
+ * @version 	1.82 18 Mar 1999
  * @author 	Firstname Lastname
  */
-public class Blah2 extends SomeClass {
+public class Blah extends SomeClass {
     /* A class implementation comment can go here. */
 
     /** classVar1 documentation comment */
