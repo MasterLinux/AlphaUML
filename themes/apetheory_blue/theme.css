@@ -641,3 +641,202 @@ li.File.selected .title {
     .Icon.test {
         background: url("images/icons/font_size_inc.png") no-repeat;
     }
+
+.Dialog {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    cursor: default;
+    font-size: 14px;
+    z-index: 200;
+}
+
+.Dialog.selected {
+    background: rgba(15, 79, 17, 0.5);
+}
+
+    .Dialog .inner {
+        margin: 4px;
+        -webkit-border-radius: 5px;
+        float: left;
+        clear: both;
+    }
+
+    .Dialog .header {
+        width: 100%;
+        float: left;
+        clear: both;
+        background: #053f70;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -webkit-user-select: none;
+    }
+
+        .Dialog .header .title {
+            float: left;
+            padding: 2px 4px;
+            color: #ededed;
+        }
+
+        .Dialog .header .close {
+            width: 16px;
+            height: 16px;
+            float: right;
+            background: #ff0011;
+            -webkit-border-radius: 4px;
+            margin: 3px;
+        }
+
+    .Dialog .body {
+        float: left;
+        clear: both;
+        width: 100%;
+        background: #ededed;
+        position: relative;
+    }
+
+        .Dialog .body .content {
+        }
+
+            .Dialog .body .content .cntBody {
+                border-top: 1px solid #ffffff;
+                padding: 2px 1px 5px 1px;
+            }
+
+            .Dialog .body .content .cntHeader {
+                border-bottom: #1f1f1f 1px solid;
+                padding: 2px 4px;
+            }
+
+    .Dialog .footer {
+        float: left;
+        clear: both;
+        width: 100%;
+        background: #ededed;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-user-select: none;
+    }
+
+        .Dialog .footer .button {
+            background: #053f70;
+            color: #ededed;
+            padding: 2px 4px;
+            margin: 2px;
+            -webkit-border-radius: 4px;
+            -webkit-user-select: none;
+        }
+
+        .Dialog .footer .button:hover {
+            background: #336699;
+        }
+
+            .Dialog .footer .button.left {
+                float: left;
+            }
+
+            .Dialog .footer .button.right {
+                float: right;
+            }
+
+.TextInput {
+    position: relative;
+    padding: 2px 4px;
+    width: 100%;
+    float: left;
+}
+
+    .TextInput input {
+        float: left;
+        border: none;
+        height: 19px;
+        -webkit-box-shadow: 0px 0px 1px #1f1f1f;
+    }
+
+        .TextInput input.error {
+            background: #ff0011;
+            color: #f0f0f0;
+        }
+
+        .TextInput input.warning {
+            background: #ffd700;
+        }
+
+    .TextInput .dropDown {
+        float: left;
+        clear: both;
+        position: relative;
+    }
+
+    .TextInput .buttons {
+        float: left;
+        clear: right;
+    }
+
+        .TextInput .buttons .button {
+            float: left;
+            height: 19px;
+            -webkit-border-top-right-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            -webkit-box-shadow: 0px 0px 1px #1f1f1f;
+        }
+
+            .TextInput .buttons .button.title {
+                padding: 2px;
+                background: #336699;
+                color: #D7D7D7;
+            }
+
+            .TextInput .buttons .button.icon {
+                width: 19px;
+            }
+
+                .TextInput .buttons .button.icon.arrow {
+                    background: url("images/icons/drop_down_arrow.png") no-repeat;
+                }
+
+                .TextInput .buttons .button.icon.arrow:hover {
+                    background: url("images/icons/drop_down_arrow_hover.png") no-repeat;
+                }
+
+.DropDownMenu {
+    position: absolute;
+    background: #D7D7D7;
+    -webkit-border-bottom-left-image: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    float: left;
+    z-index: 150;
+}
+
+    .DropDownMenu .option {
+        float: left;
+        width: 100%;
+        clear: both;
+        -webkit-user-select: none;
+        border-top: #FFFFFF 1px solid;
+        border-bottom: #666666 1px solid;
+    }
+
+    .DropDownMenu .option:hover {
+        background: #053f70;
+        color: #EEEEEE;
+    }
+
+    .DropDownMenu .option:first-child {
+        border-top: none;
+    }
+
+    .DropDownMenu .option:last-child {
+        border-bottom: none;
+    }
+
+        .DropDownMenu .option .icon {
+            float: left;
+        }
+
+        .DropDownMenu .option .title {
+            float: left;
+            margin: 2px 4px;
+        }
