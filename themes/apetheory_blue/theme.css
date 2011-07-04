@@ -401,6 +401,22 @@ li.File.selected .title {
             background: url("images/icons/save_hover.png");
         }
 
+        .Tools .button.class {
+            background: url("images/icons/class.png");
+        }
+
+        .Tools .button.class:hover {
+            background: url("images/icons/class_hover.png");
+        }
+
+        .Tools .button.generalization {
+            background: url("images/icons/generalization.png");
+        }
+
+        .Tools .button.generalization:hover {
+            background: url("images/icons/generalization_hover.png");
+        }
+
 .Class {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
@@ -837,6 +853,36 @@ li.File.selected .title {
         }
 
         .DropDownMenu .option .title {
+            float: left;
+            margin: 2px 4px;
+        }
+
+.MouseInfo {
+    position: absolute;
+    -webkit-user-select: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    cursor: default;
+    font-size: 12px;
+    z-index: 300;
+}
+
+    .MouseInfo .inner {
+        -webkit-border-radius: 5px;
+        margin: 4px;
+        background: #ededed;
+        float: left;
+        clear: both;
+    }
+
+        .MouseInfo .icon {
+            float: left;
+            margin: 2px 4px;
+        }
+
+        .MouseInfo .title {
             float: left;
             margin: 2px 4px;
         }
