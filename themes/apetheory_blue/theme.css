@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    font-family: DroidSans;
+}
+
 ul.tree {
     margin: 1px 0 1px 10px;
     list-style: none;
@@ -196,15 +200,18 @@ li.File.selected .title {
 
 .TabBar {
     height: 30px;
+    -webkit-user-select: none;
 }
 
     .TabBar .outer {
         height: 100%;
         background: url("images/ui/tab_bar_bg.png") repeat-x;
-        -webkit-box-shadow: 0px 1px 1px #3f3f3f;
+        /* -webkit-box-shadow: 0px 1px 1px #3f3f3f; */
         margin: 0 0 2px 0;
         overflow: hidden;
         float: left;
+        border-left: #73aaee 1px solid;
+        border-right: #0e1c4d 1px solid;
     }
 
         .TabBar .outer .inner {
@@ -214,43 +221,78 @@ li.File.selected .title {
 
     .TabBar .leftBtn {
         height: 30px;
-        width: 20px;
-        background: #ff00ff;
+        width: 18px;
         float: left;
         -webkit-user-select: none;
         -moz-user-select: none;
+        background: url("images/ui/tab_bar_bg.png") repeat-x;
+        border-right: #0e1c4d 1px solid;
     }
+
+    .TabBar .leftBtn:hover {
+        background: url("images/ui/tab_bar_bg_hover.png") repeat-x;
+    }
+
+        .TabBar .leftBtn .icon {
+            margin:  8px 0 0 5px;
+            width: 8px;
+            height: 13px;
+            background: url("images/ui/arrow_left.png") no-repeat;
+        }
 
     .TabBar .rightBtn {
         height: 30px;
-        width: 20px;
-        background: #ff00ff;
+        width: 18px;
         float: left;
         -webkit-user-select: none;
         -moz-user-select: none;
+        background: url("images/ui/tab_bar_bg.png") repeat-x;
+        border-left: #73aaee 1px solid;
     }
+
+    .TabBar .rightBtn:hover {
+        background: url("images/ui/tab_bar_bg_hover.png") repeat-x;
+    }
+
+        .TabBar .rightBtn .icon {
+            margin:  8px 0 0 5px;
+            width: 8px;
+            height: 13px;
+            background: url("images/ui/arrow_right.png") no-repeat;
+        }
 
 .Tab {
     height: 26px;
-    color: #053f70;
-    margin: 4px 0 0 0;
-    text-shadow: 1px 1px 0px #b6d9f7;
-    font-family: SansationRegular;
+    margin: 4px 1px 0 1px;
     float: left;
     cursor: default;
     -webkit-user-select: none;
     -moz-user-select: none;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+
+.Tab:first-child {
+    margin: 4px 1px 0 4px;
 }
 
 .Tab:last-child {
     clear: right;
 }
 
+    .Tab .inner {
+        height: 26px;
+        margin: 2px 2px 0 2px;
+    }
+
     .Tab .button {
         height: 100%;
         background: url("images/ui/tab.png") repeat-x;
+        border-right: #9f9f9f 1px solid;
         -webkit-border-top-left-radius: 5px;
-        -webkit-box-shadow: 0px -1px 0px #505050;
+        text-shadow: 1px 1px 0px #ffffff;
+        color: #3f3f3f;
         float: left;
     }
 
@@ -260,22 +302,23 @@ li.File.selected .title {
 
     .Tab:Hover .button,
     .Tab.selected .button {
-        color: #ededed;
-        background: url("images/ui/tab_selected.png") repeat-x;
         text-shadow: -1px -1px 0px #3f3f3f;
+        color: #ffffff;
+        background: url("images/ui/tab_selected.png") repeat-x;
+        border-right: #505050 1px solid;
     }
 
     .Tab.selected .button {
-        font-family: SansationBold;
+        font-family: DroidSansBold !important;
     }
 
     .Tab .close {
         width: 16px;
         height: 100%;
         background: url("images/ui/tab.png");
+        border-left: #ffffff 1px solid;
         margin: 0 1px 0 0;
         -webkit-border-top-right-radius: 5px;
-        -webkit-box-shadow: 0px -1px 0px #505050;
         float: left;
     }
 
@@ -286,6 +329,13 @@ li.File.selected .title {
 
         .Tab .close:hover {
             background: url("images/ui/tab_close.png");
+        }
+
+        .Tab .close .icon {
+            width: 10px;
+            height: 11px;
+            background: url("images/ui/close.png") no-repeat;
+            margin: 7px 3px;
         }
 
 .HMenu {
@@ -454,14 +504,26 @@ li.File.selected .title {
         -webkit-border-bottom-right-radius: 5px;
     }
 
+        .Class .bodyHeader {
+            float: left;
+            clear: both;
+            width: 100%;
+            border-bottom: #3f3f3f 1px solid;
+        }
+
+            .Class .bodyHeader .bodyTitle {
+                margin: 2px;
+                float: left;
+            }
+
         .Class .body .button {
-            margin: 1px 0;
-            padding: 1px 0;
+            margin: 1px 2px;
+            width: 15px;
+            height: 15px;
             background: #b6d9f7;
-            -webkit-border-radius: 4px;
+            -webkit-border-radius: 3px;
             text-align: center;
             float: left;
-            width: 100%;
         }
 
         .Class .body .button:hover {
@@ -502,9 +564,13 @@ li.File.selected .title {
     .Class .operations,
     .Class .attributes {
         float: left;
-        width: 100%;
         clear: both;
         margin: 1px 2px;
+    }
+
+    .Class .parameter {
+        float: left;
+        margin: 0 2px;
     }
 
     .Class .icon {
