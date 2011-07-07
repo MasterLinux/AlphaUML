@@ -436,6 +436,14 @@ li.File.selected .title {
             background: url("images/icons/composition_hover.png");
         }
 
+        .Tools .button.association {
+            background: url("images/icons/association.png");
+        }
+
+        .Tools .button.association:hover {
+            background: url("images/icons/association_hover.png");
+        }
+
 .Class {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
