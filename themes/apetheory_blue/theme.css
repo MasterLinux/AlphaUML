@@ -1001,3 +1001,21 @@ li.File.selected .title {
             float: left;
             margin: 2px 4px;
         }
+
+.ConnectorLabel {
+    position: absolute;
+    background: #666666;
+    color: #ededed;
+    -webkit-box-shadow: 1px 1px 1px #000000;
+    font-size: 12px;
+    padding: 2px 4px;
+}
+
+    .ConnectorLabel .label {
+        padding: 2px;
+    }
+
+    .ConnectorLabel .label:hover {
+        background: #ededed;
+        color: #666666;
+    }
