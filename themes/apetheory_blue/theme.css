@@ -637,7 +637,7 @@ li.File.selected .title {
     background: #444444;
     position: absolute;
     -webkit-border-radius: 2px;
-    z-index: 300;
+    z-index: 100;
 }
 
     .Generalization.north {
@@ -645,7 +645,7 @@ li.File.selected .title {
         height: 15px;
         background: url("images/tools/generalization_north.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Generalization.east {
@@ -653,7 +653,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/generalization_east.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Generalization.south {
@@ -661,7 +661,7 @@ li.File.selected .title {
         height: 15px;
         background: url("images/tools/generalization_south.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Generalization.west {
@@ -669,7 +669,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/generalization_west.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Aggregation.north,
@@ -678,7 +678,7 @@ li.File.selected .title {
         height: 29px;
         background: url("images/tools/aggregation_north.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Aggregation.east,
@@ -687,7 +687,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/aggregation_east.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Composition.north,
@@ -696,7 +696,7 @@ li.File.selected .title {
         height: 29px;
         background: url("images/tools/composition_north.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
     .Composition.east,
@@ -705,13 +705,13 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/composition_east.png") no-repeat;
         position: absolute;
-        z-index: 300;
+        z-index: 100;
     }
 
 .Line {
     position: absolute;
     background: #444444;
-    z-index: 275;
+    z-index: 95;
 }
 
 .ContextMenu {
@@ -1009,9 +1009,20 @@ li.File.selected .title {
     -webkit-box-shadow: 1px 1px 1px #000000;
     font-size: 12px;
     padding: 2px 4px;
+    z-index: 105;
 }
 
+    .ConnectorLabel.rotated {
+        -webkit-transform: rotate(90deg);
+        -webkit-box-shadow: 1px -1px 1px #000000;
+    }
+
+    .ConnectorLabel .input {
+        float: left;
+    }
+
     .ConnectorLabel .label {
+        float: left;
         padding: 2px;
     }
 
@@ -1019,3 +1030,25 @@ li.File.selected .title {
         background: #ededed;
         color: #666666;
     }
+
+    .ConnectorLabel .icon {
+        margin-top: 2px;
+        width: 11px;
+        height: 10px;
+    }
+
+        .ConnectorLabel .icon.readDirectionEast {
+            background: url("images/icons/read_direction_east.png") no-repeat;
+        }
+
+        .ConnectorLabel .icon.readDirectionEast:hover {
+            background: url("images/icons/read_direction_east_hover.png") no-repeat;
+        }
+
+        .ConnectorLabel .icon.readDirectionWest {
+            background: url("images/icons/read_direction_west.png") no-repeat;
+        }
+
+        .ConnectorLabel .icon.readDirectionWest:hover {
+            background: url("images/icons/read_direction_west_hover.png") no-repeat;
+        }
