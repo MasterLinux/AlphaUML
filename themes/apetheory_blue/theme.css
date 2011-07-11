@@ -459,7 +459,7 @@ li.File.selected .title {
 }
 
     .Class .inner {
-        margin: 5px;
+        margin: 3px;
         -webkit-border-radius: 5px;
         float: left;
         clear: both;
@@ -491,6 +491,8 @@ li.File.selected .title {
             .Class .bodyHeader .bodyTitle {
                 margin: 2px;
                 float: left;
+                color: #3f3f3f;
+                text-shadow: 1px 1px 1px #ffffff;
             }
 
         .Class .body .button {
@@ -509,13 +511,13 @@ li.File.selected .title {
         }
 
     .Class .title {
-        background: #053f70;
+        background: url("images/ui/class_header_bg.png") left top repeat-x, url("images/ui/class_header_bg_color.png");
         color: #BABABA;
         -webkit-border-top-left-radius: 5px;
         -webkit-border-top-right-radius: 5px;
         float: left;
         clear: both;
-        width: 100%;
+        width: 100%
     }
 
         .Class .title .first {
@@ -722,10 +724,11 @@ li.File.selected .title {
     -webkit-user-select: none;
     cursor: default;
     z-index: 150;
+    font-size: 14px;
 }
 
     .ContextMenu .inner {
-        margin: 5px;
+        margin: 3px;
         -webkit-border-radius: 5px;
     }
 
@@ -1008,7 +1011,7 @@ li.File.selected .title {
     color: #ededed;
     -webkit-box-shadow: 1px 1px 1px #000000;
     font-size: 12px;
-    padding: 2px 4px;
+    padding: 1px 2px;
     z-index: 105;
 }
 
@@ -1023,7 +1026,7 @@ li.File.selected .title {
 
     .ConnectorLabel .label {
         float: left;
-        padding: 2px;
+        padding: 1px 2px;
     }
 
     .ConnectorLabel .label:hover {
