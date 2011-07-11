@@ -1,5 +1,5 @@
 /*
- * @(#)Blah2.java        1.82 99/03/18
+ * @(#)Blah42.java        1.82 99/03/18
  *
  * Copyright (c) 1994-1999 Sun Microsystems, Inc.
  * 901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
