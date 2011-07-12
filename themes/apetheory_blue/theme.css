@@ -868,6 +868,22 @@ li.File.selected .title {
                 padding: 2px 4px;
             }
 
+        .Dialog .body .preview {
+            float: left;
+            clear: both;
+            width: 100%;
+        }
+
+        .Dialog .body .table {
+            float: left;
+            clear: both;
+            width: 100%;
+        }
+
+            .Dialog .body .table .row {
+                float: left;
+            }
+
     .Dialog .footer {
         float: left;
         clear: both;
