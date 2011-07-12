@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    font-family: DroidSans;
+}
+
 ul.tree {
     margin: 1px 0 1px 10px;
     list-style: none;
@@ -103,53 +107,6 @@ li.File.selected .title {
     -webkit-box-shadow: 1px 1px 1px #1f1f1f;
 }
 
-.Window {
-    width: 800px;
-    height: 600px;
-    float: left;
-}
-
-    .Window .header {
-        height: 35px;
-        width: 100%;
-        background: #00ff11;
-        float: left;
-    }
-
-    .Window .body {
-        width: 100%;
-        height: 520px;
-        float: left;
-    }
-
-        .Window .body .left {
-            width: 200px;
-            height: 100%;
-            float: left;
-            background: #ff0011;
-        }
-
-        .Window .body .right {
-            width: 600px;
-            height: 100%;
-            float: left;
-            background: #00ffff;
-        }
-
-            .Window .body .right .top {
-                width: 100%;
-                height: 70%;
-                float: left;
-                background: #0000FF;
-            }
-
-            .Window .body .right .bottom {
-                width: 100%;
-                height: 30%;
-                float: left;
-                background: #b6d9f7;
-            }
-
 .Frame {
     position: absolute;
     background: #f5f5f5;
@@ -196,15 +153,18 @@ li.File.selected .title {
 
 .TabBar {
     height: 30px;
+    -webkit-user-select: none;
 }
 
     .TabBar .outer {
         height: 100%;
         background: url("images/ui/tab_bar_bg.png") repeat-x;
-        -webkit-box-shadow: 0px 1px 1px #3f3f3f;
+        /* -webkit-box-shadow: 0px 1px 1px #3f3f3f; */
         margin: 0 0 2px 0;
         overflow: hidden;
         float: left;
+        border-left: #73aaee 1px solid;
+        border-right: #0e1c4d 1px solid;
     }
 
         .TabBar .outer .inner {
@@ -214,43 +174,78 @@ li.File.selected .title {
 
     .TabBar .leftBtn {
         height: 30px;
-        width: 20px;
-        background: #ff00ff;
+        width: 18px;
         float: left;
         -webkit-user-select: none;
         -moz-user-select: none;
+        background: url("images/ui/tab_bar_bg.png") repeat-x;
+        border-right: #0e1c4d 1px solid;
     }
+
+    .TabBar .leftBtn:hover {
+        background: url("images/ui/tab_bar_bg_hover.png") repeat-x;
+    }
+
+        .TabBar .leftBtn .icon {
+            margin:  8px 0 0 5px;
+            width: 8px;
+            height: 13px;
+            background: url("images/ui/arrow_left.png") no-repeat;
+        }
 
     .TabBar .rightBtn {
         height: 30px;
-        width: 20px;
-        background: #ff00ff;
+        width: 18px;
         float: left;
         -webkit-user-select: none;
         -moz-user-select: none;
+        background: url("images/ui/tab_bar_bg.png") repeat-x;
+        border-left: #73aaee 1px solid;
     }
+
+    .TabBar .rightBtn:hover {
+        background: url("images/ui/tab_bar_bg_hover.png") repeat-x;
+    }
+
+        .TabBar .rightBtn .icon {
+            margin:  8px 0 0 5px;
+            width: 8px;
+            height: 13px;
+            background: url("images/ui/arrow_right.png") no-repeat;
+        }
 
 .Tab {
     height: 26px;
-    color: #053f70;
-    margin: 4px 0 0 0;
-    text-shadow: 1px 1px 0px #b6d9f7;
-    font-family: SansationRegular;
+    margin: 4px 1px 0 1px;
     float: left;
     cursor: default;
     -webkit-user-select: none;
     -moz-user-select: none;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+
+.Tab:first-child {
+    margin: 4px 1px 0 4px;
 }
 
 .Tab:last-child {
     clear: right;
 }
 
+    .Tab .inner {
+        height: 26px;
+        margin: 2px 2px 0 2px;
+    }
+
     .Tab .button {
         height: 100%;
         background: url("images/ui/tab.png") repeat-x;
+        border-right: #9f9f9f 1px solid;
         -webkit-border-top-left-radius: 5px;
-        -webkit-box-shadow: 0px -1px 0px #505050;
+        text-shadow: 1px 1px 0px #ffffff;
+        color: #3f3f3f;
         float: left;
     }
 
@@ -260,22 +255,23 @@ li.File.selected .title {
 
     .Tab:Hover .button,
     .Tab.selected .button {
-        color: #ededed;
-        background: url("images/ui/tab_selected.png") repeat-x;
         text-shadow: -1px -1px 0px #3f3f3f;
+        color: #ffffff;
+        background: url("images/ui/tab_selected.png") repeat-x;
+        border-right: #505050 1px solid;
     }
 
     .Tab.selected .button {
-        font-family: SansationBold;
+        font-family: DroidSansBold !important;
     }
 
     .Tab .close {
         width: 16px;
         height: 100%;
         background: url("images/ui/tab.png");
+        border-left: #ffffff 1px solid;
         margin: 0 1px 0 0;
         -webkit-border-top-right-radius: 5px;
-        -webkit-box-shadow: 0px -1px 0px #505050;
         float: left;
     }
 
@@ -286,6 +282,13 @@ li.File.selected .title {
 
         .Tab .close:hover {
             background: url("images/ui/tab_close.png");
+        }
+
+        .Tab .close .icon {
+            width: 10px;
+            height: 11px;
+            background: url("images/ui/close.png") no-repeat;
+            margin: 7px 3px;
         }
 
 .HMenu {
@@ -401,6 +404,46 @@ li.File.selected .title {
             background: url("images/icons/save_hover.png");
         }
 
+        .Tools .button.class {
+            background: url("images/icons/class.png");
+        }
+
+        .Tools .button.class:hover {
+            background: url("images/icons/class_hover.png");
+        }
+
+        .Tools .button.generalization {
+            background: url("images/icons/generalization.png");
+        }
+
+        .Tools .button.generalization:hover {
+            background: url("images/icons/generalization_hover.png");
+        }
+
+        .Tools .button.aggregation {
+            background: url("images/icons/aggregation.png");
+        }
+
+        .Tools .button.aggregation:hover {
+            background: url("images/icons/aggregation_hover.png");
+        }
+
+        .Tools .button.composition {
+            background: url("images/icons/composition.png");
+        }
+
+        .Tools .button.composition:hover {
+            background: url("images/icons/composition_hover.png");
+        }
+
+        .Tools .button.association {
+            background: url("images/icons/association.png");
+        }
+
+        .Tools .button.association:hover {
+            background: url("images/icons/association_hover.png");
+        }
+
 .Class {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
@@ -416,7 +459,7 @@ li.File.selected .title {
 }
 
     .Class .inner {
-        margin: 5px;
+        margin: 3px;
         -webkit-border-radius: 5px;
         float: left;
         clear: both;
@@ -438,14 +481,28 @@ li.File.selected .title {
         -webkit-border-bottom-right-radius: 5px;
     }
 
+        .Class .bodyHeader {
+            float: left;
+            clear: both;
+            width: 100%;
+            border-bottom: #3f3f3f 1px solid;
+        }
+
+            .Class .bodyHeader .bodyTitle {
+                margin: 2px;
+                float: left;
+                color: #3f3f3f;
+                text-shadow: 1px 1px 1px #ffffff;
+            }
+
         .Class .body .button {
-            margin: 1px 0;
-            padding: 1px 0;
+            margin: 1px 2px;
+            width: 15px;
+            height: 15px;
             background: #b6d9f7;
-            -webkit-border-radius: 4px;
+            -webkit-border-radius: 3px;
             text-align: center;
             float: left;
-            width: 100%;
         }
 
         .Class .body .button:hover {
@@ -454,13 +511,13 @@ li.File.selected .title {
         }
 
     .Class .title {
-        background: #053f70;
+        background: url("images/ui/class_header_bg.png") left top repeat-x, url("images/ui/class_header_bg_color.png");
         color: #BABABA;
         -webkit-border-top-left-radius: 5px;
         -webkit-border-top-right-radius: 5px;
         float: left;
         clear: both;
-        width: 100%;
+        width: 100%
     }
 
         .Class .title .first {
@@ -486,9 +543,13 @@ li.File.selected .title {
     .Class .operations,
     .Class .attributes {
         float: left;
-        width: 100%;
         clear: both;
         margin: 1px 2px;
+    }
+
+    .Class .parameter {
+        float: left;
+        margin: 0 2px;
     }
 
     .Class .icon {
@@ -571,16 +632,88 @@ li.File.selected .title {
             border: 1px solid #aaaaaa;
         }
 
-.point {
-    width: 15px;
-    height: 15px;
-    background: #1f1f1f;
+/* connector */
+.Point {
+    width: 7px;
+    height: 7px;
+    background: #444444;
     position: absolute;
+    -webkit-border-radius: 2px;
+    z-index: 100;
 }
 
-.line {
+    .Generalization.north {
+        width: 17px;
+        height: 15px;
+        background: url("images/tools/generalization_north.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Generalization.east {
+        width: 15px;
+        height: 17px;
+        background: url("images/tools/generalization_east.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Generalization.south {
+        width: 17px;
+        height: 15px;
+        background: url("images/tools/generalization_south.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Generalization.west {
+        width: 15px;
+        height: 17px;
+        background: url("images/tools/generalization_west.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Aggregation.north,
+    .Aggregation.south {
+        width: 17px;
+        height: 29px;
+        background: url("images/tools/aggregation_north.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Aggregation.east,
+    .Aggregation.west {
+        width: 29px;
+        height: 17px;
+        background: url("images/tools/aggregation_east.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Composition.north,
+    .Composition.south {
+        width: 17px;
+        height: 29px;
+        background: url("images/tools/composition_north.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Composition.east,
+    .Composition.west {
+        width: 29px;
+        height: 17px;
+        background: url("images/tools/composition_east.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+.Line {
     position: absolute;
-    background: #1f1f1f;
+    background: #444444;
+    z-index: 95;
 }
 
 .ContextMenu {
@@ -591,10 +724,11 @@ li.File.selected .title {
     -webkit-user-select: none;
     cursor: default;
     z-index: 150;
+    font-size: 14px;
 }
 
     .ContextMenu .inner {
-        margin: 5px;
+        margin: 3px;
         -webkit-border-radius: 5px;
     }
 
@@ -641,3 +775,283 @@ li.File.selected .title {
     .Icon.test {
         background: url("images/icons/font_size_inc.png") no-repeat;
     }
+
+.Dialog {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    cursor: default;
+    font-size: 14px;
+    z-index: 200;
+}
+
+.Dialog.selected {
+    background: rgba(15, 79, 17, 0.5);
+}
+
+    .Dialog .inner {
+        margin: 4px;
+        -webkit-border-radius: 5px;
+        float: left;
+        clear: both;
+    }
+
+    .Dialog .header {
+        width: 100%;
+        float: left;
+        clear: both;
+        background: #053f70;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -webkit-user-select: none;
+    }
+
+        .Dialog .header .title {
+            float: left;
+            padding: 2px 4px;
+            color: #ededed;
+        }
+
+        .Dialog .header .close {
+            width: 16px;
+            height: 16px;
+            float: right;
+            background: #ff0011;
+            -webkit-border-radius: 4px;
+            margin: 3px;
+        }
+
+    .Dialog .body {
+        float: left;
+        clear: both;
+        width: 100%;
+        background: #ededed;
+        position: relative;
+    }
+
+        .Dialog .body .content {
+        }
+
+            .Dialog .body .content .cntBody {
+                border-top: 1px solid #ffffff;
+                padding: 2px 1px 5px 1px;
+            }
+
+            .Dialog .body .content .cntHeader {
+                border-bottom: #1f1f1f 1px solid;
+                padding: 2px 4px;
+            }
+
+    .Dialog .footer {
+        float: left;
+        clear: both;
+        width: 100%;
+        background: #ededed;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-user-select: none;
+    }
+
+        .Dialog .footer .button {
+            background: #053f70;
+            color: #ededed;
+            padding: 2px 4px;
+            margin: 2px;
+            -webkit-border-radius: 4px;
+            -webkit-user-select: none;
+        }
+
+        .Dialog .footer .button:hover {
+            background: #336699;
+        }
+
+            .Dialog .footer .button.left {
+                float: left;
+            }
+
+            .Dialog .footer .button.right {
+                float: right;
+            }
+
+.TextInput {
+    position: relative;
+    padding: 2px 4px;
+    width: 100%;
+    float: left;
+}
+
+    .TextInput input {
+        float: left;
+        border: none;
+        height: 19px;
+        -webkit-box-shadow: 0px 0px 1px #1f1f1f;
+    }
+
+        .TextInput input.error {
+            background: #ff0011;
+            color: #f0f0f0;
+        }
+
+        .TextInput input.warning {
+            background: #ffd700;
+        }
+
+    .TextInput .dropDown {
+        float: left;
+        clear: both;
+        position: relative;
+    }
+
+    .TextInput .buttons {
+        float: left;
+        clear: right;
+    }
+
+        .TextInput .buttons .button {
+            float: left;
+            height: 19px;
+            -webkit-border-top-right-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            -webkit-box-shadow: 0px 0px 1px #1f1f1f;
+        }
+
+            .TextInput .buttons .button.title {
+                padding: 2px;
+                background: #336699;
+                color: #D7D7D7;
+            }
+
+            .TextInput .buttons .button.icon {
+                width: 19px;
+            }
+
+                .TextInput .buttons .button.icon.arrow {
+                    background: url("images/icons/drop_down_arrow.png") no-repeat;
+                }
+
+                .TextInput .buttons .button.icon.arrow:hover {
+                    background: url("images/icons/drop_down_arrow_hover.png") no-repeat;
+                }
+
+.DropDownMenu {
+    position: absolute;
+    background: #D7D7D7;
+    -webkit-border-bottom-left-image: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    float: left;
+    z-index: 150;
+}
+
+    .DropDownMenu .option {
+        float: left;
+        width: 100%;
+        clear: both;
+        -webkit-user-select: none;
+        border-top: #FFFFFF 1px solid;
+        border-bottom: #666666 1px solid;
+    }
+
+    .DropDownMenu .option:hover {
+        background: #053f70;
+        color: #EEEEEE;
+    }
+
+    .DropDownMenu .option:first-child {
+        border-top: none;
+    }
+
+    .DropDownMenu .option:last-child {
+        border-bottom: none;
+    }
+
+        .DropDownMenu .option .icon {
+            float: left;
+        }
+
+        .DropDownMenu .option .title {
+            float: left;
+            margin: 2px 4px;
+        }
+
+.MouseInfo {
+    position: absolute;
+    -webkit-user-select: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    cursor: default;
+    font-size: 12px;
+    z-index: 300;
+}
+
+    .MouseInfo .inner {
+        -webkit-border-radius: 5px;
+        margin: 4px;
+        background: #ededed;
+        float: left;
+        clear: both;
+    }
+
+        .MouseInfo .icon {
+            float: left;
+            margin: 2px 4px;
+        }
+
+        .MouseInfo .title {
+            float: left;
+            margin: 2px 4px;
+        }
+
+.ConnectorLabel {
+    position: absolute;
+    background: #666666;
+    color: #ededed;
+    -webkit-box-shadow: 1px 1px 1px #000000;
+    font-size: 12px;
+    padding: 1px 2px;
+    z-index: 105;
+}
+
+    .ConnectorLabel.rotated {
+        -webkit-transform: rotate(90deg);
+        -webkit-box-shadow: 1px -1px 1px #000000;
+    }
+
+    .ConnectorLabel .input {
+        float: left;
+    }
+
+    .ConnectorLabel .label {
+        float: left;
+        padding: 1px 2px;
+    }
+
+    .ConnectorLabel .label:hover {
+        background: #ededed;
+        color: #666666;
+    }
+
+    .ConnectorLabel .icon {
+        margin-top: 2px;
+        width: 11px;
+        height: 10px;
+    }
+
+        .ConnectorLabel .icon.readDirectionEast {
+            background: url("images/icons/read_direction_east.png") no-repeat;
+        }
+
+        .ConnectorLabel .icon.readDirectionEast:hover {
+            background: url("images/icons/read_direction_east_hover.png") no-repeat;
+        }
+
+        .ConnectorLabel .icon.readDirectionWest {
+            background: url("images/icons/read_direction_west.png") no-repeat;
+        }
+
+        .ConnectorLabel .icon.readDirectionWest:hover {
+            background: url("images/icons/read_direction_west_hover.png") no-repeat;
+        }
