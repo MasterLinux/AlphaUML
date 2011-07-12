@@ -545,6 +545,7 @@ li.File.selected .title {
         float: left;
         clear: both;
         margin: 1px 2px;
+        font-size: 12px;
     }
 
     .Class .parameter {
@@ -633,6 +634,10 @@ li.File.selected .title {
         }
 
 /* connector */
+.Association.north,
+.Association.south,
+.Association.east,
+.Association.west,
 .Point {
     width: 7px;
     height: 7px;
@@ -716,6 +721,20 @@ li.File.selected .title {
     z-index: 95;
 }
 
+    .Line.selected,
+    .Point.selected,
+    .Line.hovered,
+    .Point.hovered {
+        border: 1px solid #053f70;
+        background: #336699;
+    }
+
+    .Point.hovered {
+        width: 12px;
+        height: 12px;
+        -webkit-border-radius: 4px;
+    }
+
 .ContextMenu {
     position: absolute;
     background: rgba(0, 0, 0, 0.7);
@@ -766,6 +785,12 @@ li.File.selected .title {
         .ContextMenu .menu .button:hover {
             background: #aaaaaa;
         }
+
+            .ContextMenu .menu .button .btnTitle {
+            }
+
+            .ContextMenu .menu .button .extend {
+            }
 
 .Icon {
     width: 24px;
