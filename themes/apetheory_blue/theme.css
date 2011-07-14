@@ -548,6 +548,11 @@ li.File.selected .title {
         font-size: 12px;
     }
 
+        .Class .operation.static,
+        .Class .attribute.static {
+            border-bottom: 1px solid #3f3f3f;
+        }
+
     .Class .parameter {
         float: left;
         margin: 0 2px;
@@ -874,6 +879,19 @@ li.File.selected .title {
             width: 100%;
         }
 
+            .Dialog .body .preview .row {
+                text-align: center;
+                padding: 5px 0;
+            }
+
+                .Dialog .body .preview .row .title {
+                    font-weight: bold;
+                }
+
+                .Dialog .body .preview .row.static .sample {
+                    border-bottom: #1f1f1f 1px solid;
+                }
+
         .Dialog .body .table {
             float: left;
             clear: both;
@@ -1096,3 +1114,48 @@ li.File.selected .title {
         .ConnectorLabel .icon.readDirectionWest:hover {
             background: url("images/icons/read_direction_west_hover.png") no-repeat;
         }
+
+.List {
+    float: left;
+}
+
+    .List .button {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: #336699;
+        clear: none;
+    }
+
+        .List .button:hover {
+            background: #aaaaaa;
+        }
+
+    .List .body {
+        float:left;
+        clear: none;
+    }
+
+        .List .body .entry {
+            width: 100%;
+            float: left;
+            clear: both;
+        }
+
+            .List .body .entry .title {
+                float: left;
+            }
+
+            .List .body .entry .edit {
+                float: left;
+                width: 20px;
+                height: 20px;
+                background: #7fff00;
+            }
+
+            .List .body .entry .remove {
+                float: left;
+                width: 20px;
+                height: 20px;
+                background: #ff0011;
+            }
