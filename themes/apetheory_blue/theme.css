@@ -466,7 +466,7 @@ li.File.selected .title {
     }
 
     .Class .toolbar {
-        padding:  0 0 5px 0;
+        padding:  0 0 3px 0;
         float: left;
         clear: both;
     }
@@ -496,18 +496,21 @@ li.File.selected .title {
             }
 
         .Class .body .button {
-            margin: 1px 2px;
-            width: 15px;
-            height: 15px;
-            background: #b6d9f7;
+            margin: 3px 2px 0 2px;
+            width: 14px;
+            height: 14px;
+            background: url("images/icons/add_14x14.png") no-repeat;
             -webkit-border-radius: 3px;
             text-align: center;
             float: left;
+            -webkit-box-shadow: 1px 1px 1px #3f3f3f;
         }
 
         .Class .body .button:hover {
-            background: #053f70;
-            color: #f5f5f5;
+        }
+
+        .Class .body .button.noMargin {
+            margin: 1px 2px 0 2px;
         }
 
     .Class .title {
@@ -553,6 +556,11 @@ li.File.selected .title {
             border-bottom: 1px solid #3f3f3f;
         }
 
+        .Class .operation.abstract,
+        .Class .attribute.abstract {
+            font-style: italic;
+        }
+
     .Class .parameter {
         float: left;
         margin: 0 2px;
@@ -562,6 +570,8 @@ li.File.selected .title {
         width: 24px;
         height: 24px;
         float: left;
+        -webkit-border-radius: 4px;
+        -webkit-box-shadow: 1px 1px 1px #3f3f3f;
     }
 
         .Class .icon.pin {
@@ -880,16 +890,49 @@ li.File.selected .title {
         }
 
             .Dialog .body .preview .row {
+                font-size: 12px;
                 text-align: center;
                 padding: 5px 0;
+                margin: 0 2px;
+            }
+
+                .Dialog .body .preview .row .class {
+                    float: left;
+                    padding: 4px;
+                    border: 1px solid #3f3f3f;
+                }
+
+                .Dialog .body .preview .row .line {
+                    height: 2px;
+                    width: 175px;
+                    background: #3f3f3f;
+                    float: left;
+                    margin: 11px 0 0 0;
+                }
+
+                .Dialog .body .preview .row .generalization {
+                    background: url("images/tools/generalization_west.png") no-repeat;
+                    width: 15px;
+                    height: 17px;
+                    float: left;
+                    margin: 3px 0 0 0;
+                }
+
+            .Dialog .body .preview .row:last-child {
+                padding: 5px 0 12px 0;
             }
 
                 .Dialog .body .preview .row .title {
                     font-weight: bold;
+                    font-size: 14px;
                 }
 
                 .Dialog .body .preview .row.static .sample {
                     border-bottom: #1f1f1f 1px solid;
+                }
+
+                .Dialog .body .preview .row.abstract .sample {
+                    font-style: italic;
                 }
 
         .Dialog .body .table {
@@ -900,6 +943,7 @@ li.File.selected .title {
 
             .Dialog .body .table .row {
                 float: left;
+                margin: 2px 4px;
             }
 
     .Dialog .footer {
@@ -1117,45 +1161,67 @@ li.File.selected .title {
 
 .List {
     float: left;
+    width: 100%;
+    clear: both;
 }
 
     .List .button {
+        margin: 2px;
+        width: 14px;
+        height: 14px;
+        background: url("images/icons/add_14x14.png") no-repeat;
         float: left;
-        width: 20px;
-        height: 20px;
-        background: #336699;
-        clear: none;
+        -webkit-border-radius: 3px;
+        -webkit-box-shadow: 1px 1px 1px #3f3f3f;
     }
 
         .List .button:hover {
-            background: #aaaaaa;
+
         }
 
     .List .body {
-        float:left;
-        clear: none;
+        float:right;
     }
 
         .List .body .entry {
-            width: 100%;
             float: left;
             clear: both;
+            width: 100%;
+            background: #cccccc;
+            border-bottom: #3f3f3f 1px solid;
+            border-top: #ffffff 1px solid;
+            padding: 2px 0 4px 0;
+        }
+
+        .List .body .entry:first-child {
+            border-top: none;
+        }
+
+        .List .body .entry:last-child {
+            border-bottom: none;
         }
 
             .List .body .entry .title {
                 float: left;
+                margin: 0 0 0 2px;
             }
 
             .List .body .entry .edit {
-                float: left;
-                width: 20px;
-                height: 20px;
-                background: #7fff00;
+                margin: 1px 2px;
+                float: right;
+                width: 14px;
+                height: 14px;
+                background: url("images/icons/edit_14x14.png") no-repeat;
+                -webkit-border-radius: 3px;
+                -webkit-box-shadow: 1px 1px 1px #3f3f3f;
             }
 
             .List .body .entry .remove {
-                float: left;
-                width: 20px;
-                height: 20px;
-                background: #ff0011;
+                margin: 1px 2px;
+                float: right;
+                width: 14px;
+                height: 14px;
+                background: url("images/icons/remove_14x14.png") no-repeat;
+                -webkit-border-radius: 3px;
+                -webkit-box-shadow: 1px 1px 1px #3f3f3f;
             }
