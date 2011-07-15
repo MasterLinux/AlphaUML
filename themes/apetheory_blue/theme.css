@@ -649,10 +649,6 @@ li.File.selected .title {
         }
 
 /* connector */
-.Association.north,
-.Association.south,
-.Association.east,
-.Association.west,
 .Point {
     width: 7px;
     height: 7px;
@@ -726,6 +722,38 @@ li.File.selected .title {
         width: 29px;
         height: 17px;
         background: url("images/tools/composition_east.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Association.north {
+        width: 18px;
+        height: 15px;
+        background: url("images/tools/association_north.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Association.east {
+        width: 15px;
+        height: 18px;
+        background: url("images/tools/association_east.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Association.south {
+        width: 18px;
+        height: 15px;
+        background: url("images/tools/association_south.png") no-repeat;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .Association.west {
+        width: 15px;
+        height: 18px;
+        background: url("images/tools/association_west.png") no-repeat;
         position: absolute;
         z-index: 100;
     }
@@ -894,7 +922,17 @@ li.File.selected .title {
                 text-align: center;
                 padding: 5px 0;
                 margin: 0 2px;
+                float: left;
+                clear: both;
             }
+
+                .Dialog .body .preview .row .inner {
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    float: left;
+                    clear: none;
+                }
 
                 .Dialog .body .preview .row .class {
                     float: left;
@@ -910,12 +948,73 @@ li.File.selected .title {
                     margin: 11px 0 0 0;
                 }
 
+                .Dialog .body .preview .row .spacer {
+                    height: 2px;
+                    width: 175px;
+                    float: left;
+                }
+
+                .Dialog .body .preview .row .arrow .line {
+                    width: 100%;
+                }
+
+                .Dialog .body .preview .row .association.line {
+                    position: absolute;
+                    top: 18px;
+                }
+
+                .Dialog .body .preview .row .association.class {
+                    margin-top: 18px;
+                }
+
                 .Dialog .body .preview .row .generalization {
                     background: url("images/tools/generalization_west.png") no-repeat;
                     width: 15px;
                     height: 17px;
                     float: left;
                     margin: 3px 0 0 0;
+                }
+
+                .Dialog .body .preview .row .association .west {
+                    background: url("images/tools/association_west.png") no-repeat;
+                    position: absolute;
+                    top: 18px;
+                    left: 0px;
+                    width: 15px;
+                    height: 18px;
+                    float: left;
+                    margin: 3px 0 0 0;
+                }
+
+                .Dialog .body .preview .row .association .east {
+                    background: url("images/tools/association_east.png") no-repeat;
+                    position: absolute;
+                    top: 18px;
+                    right: 0px;
+                    width: 15px;
+                    height: 18px;
+                    float: left;
+                    margin: 3px 0 0 0;
+                }
+
+                .Dialog .body .preview .row .association.multiplicity {
+                    float: left;
+                    margin: 11px 5px 0 5px;
+                    padding: 2px 5px;
+                    background: #3f3f3f;
+                    color: #ededed;
+                }
+
+                .Dialog .body .preview .row .association.role {
+                    float: left;
+                    margin: 0 5px;
+                    padding: 2px 5px;
+                    background: #3f3f3f;
+                    color: #ededed;
+                }
+
+                .Dialog .body .preview .row .association.name {
+                    margin: 12px 0 0 0;
                 }
 
             .Dialog .body .preview .row:last-child {
