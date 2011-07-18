@@ -1,31 +1,39 @@
+
+
 /*
  * Implementation of the Java language
  * as a parser expression grammar
  */
 
-start = __ Class+ __ !.
+start =
+    __ $c:Class+ __ !.
+    {
+        return $c;
+    }
 
 Class =
     $jd:JavaDocComment? __
-    $v:VisibilityKeyword __
-    Keyword __
-    $n:WordNumber __
-    $e:("extends" __ $e:WordNumber __ {return $e;})?
+    $v:VisibilityKeyword? __
+    $t:("class"/"interface"/"enum") __
+    $n:Identifier __
+    $e:("extends" __ $e:Identifier __ {return $e;})?
+    $i:("implements" __ $i:(__ ","? __ $i:Identifier __ {return $i})+ {return $i;})?
     "{" __
-    $m:InnerClass
+    $b:ClassBody
     "}"
     {
         return {
-            type: "class",
-            javaDoc: $jd,
-            visibility: $v,
+            type: $t,
+            javaDoc: $jd != "" ? $jd : null,
+            visibility: $v != "" ? $v : null,
             name: $n,
-            extends: $e,
-            method: $m
-        }
+            extend: $e,
+            implement: $i.length > 0 ? $i : null,
+            body: $b
+        };
     }
 
-InnerClass =
+ClassBody =
     $m:(Method / Variable / WhiteSpace {return "";} / EndOfLine {return "";})*
     {
         var result = {};
@@ -53,29 +61,30 @@ InnerClass =
 Method =
     $jd:JavaDocComment? __
     $v:VisibilityKeyword __
-    $m:($m:ModifierKeyword __ {return $m;})?
-    $d:($d:DataTypeKeyword __ {return $d;})?
-    $n:WordNumber __
+    $m:($m:ModifierKeyword __ {return $m;})*
+    $d:($d:DataType __ !"(" __ {return $d;})?
+    $n:Identifier __
     "(" $pl:ParameterList ")" __
-    "{" (!"}" .)* "}"
+    "{" $b:(!"}" $b:. {return $b;})* "}"
     {
         return {
             type: "method",
             javaDoc: $jd,
             name: $n,
-            visibility:  $v,
-            modifier: $m !== "" ? $m : null,
-            dataType: $d !== "" ? $d : "constructor",
-            parameter: $pl
+            visibility: $v,
+            modifier: $m.length > 0 ? $m : null,
+            dataType: $d !== "" ? $d.dataType : "constructor",
+            parameter: $pl,
+            body: $b.join("")
         };
     }
 
 Variable =
     $jd:JavaDocComment? __
     $v:VisibilityKeyword __
-    $m:($m:ModifierKeyword __ {return $m;})?
-    $d:WordNumber __
-    $n:WordNumber __
+    $m:($m:ModifierKeyword __ {return $m;})*
+    $d:DataType __ !("="/";") __
+    $n:Identifier __
     $val:("=" __ $v:(!";" $v:. {return $v;})* {return $v;})? ";"
     {
         //get value if exists and remove each existing quote
@@ -90,46 +99,77 @@ Variable =
             javaDoc: $jd,
             name: $n,
             visibility:  $v,
-            modifier: $m !== "" ? $m : null,
-            dataType: $d,
+            modifier: $m.length >0 ? $m : null,
+            array: $d ? $d.array : null,
+            generic: $d ? $d.generic : null,
+            dataType: $d ? $d.dataType : null,
             value: value
         };
     }
 
-Word =
-    $w:[a-zA-Z]+
+Generic =
+    "<" __ $g:Identifier __ ">"
     {
-        return $w.join("");
+        return $g;
     }
 
-WordNumber =
-    $wn:[a-zA-Z0-9]+
+Array =
+    $a:("[" __ "]")
     {
-        return $wn.join("");
+        return ($a && $a != "") ? true : false;
     }
 
-Parameter =
-    $d:(DataTypeKeyword/Word) __ $n:Word
+DataType =
+    $d:DataTypeKeyword __
+    $g:($g:Generic __ {return $g;})?
+    $a:($a:Array __ {return $a;})?
     {
         return {
-            dataType: $d,
+            generic: $g !== "" ? $g : null,
+            array: $a !== "" ? $a : false,
+            dataType: $d
+        };
+    }
+
+Identifier =
+    $i:[a-zA-Z0-9_$]+
+    {
+        return $i.join("");
+    }
+
+JavaLetter =
+    [a-zA-Z_$]
+
+JavaDigit =
+    [0-9]
+
+Parameter =
+    $m:($m:ModifierKeyword __ {return $m;})?
+    $d:DataType __
+    $n:Identifier __
+    {
+        return {
+            modifier: $m !== "" ? $m : null,
+            generic: $d.generic,
+            array: $d.array,
+            dataType: $d.dataType,
             name: $n
-        } 
+        };
     }
 
 ParameterList = (
-    __ $p:Parameter __ ","? __
+    __ ","? __ $p:Parameter
     {
-        return $p
+        return $p;
     }
 )*
 
 WhiteSpace
   = [\t\v\f \u00A0\uFEFF]
-  / Zs
+  / Space
 
 //Separator, Space
-Zs = [\u0020\u00A0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000]
+Space = [\u0020\u00A0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000]
 
 EndOfLine
   = "\n"
@@ -176,11 +216,41 @@ JavaDocComment =
                 //push object into array
                 comment.param.push($p[i]);
             }
+            //add throws object
+            else if($p[i].tag == "throws") {
+                ++index;
+                //create throws array if doesn't exists
+                if(!comment["throws"]) comment["throws"] = [];
+                //push object into array
+                comment.throws.push($p[i]);
+            }
+            //add exception object
+            else if($p[i].tag == "exception") {
+                ++index;
+                //create exception array if doesn't exists
+                if(!comment["exception"]) comment["exception"] = [];
+                //push object into array
+                comment.exception.push($p[i]);
+            }
+            //add author object
+            else if($p[i].tag == "author") {
+                ++index;
+                //create author array if doesn't exists
+                if(!comment["author"]) comment["author"] = [];
+                //push object into array
+                comment.author.push($p[i]);
+            }
             //add return object
             else if($p[i].tag == "return") {
                 ++index;
                 //return is only allowed once
                 comment["return"] = $p[i];
+            }
+            //add since object
+            else if($p[i].tag == "since") {
+                ++index;
+                //return is only allowed once
+                comment["since"] = $p[i];
             }
         }
 
@@ -190,17 +260,41 @@ JavaDocComment =
 JavaDocTag = (
         JavaDocParam
     /   JavaDocReturn
+    /   JavaDocThrows
+    /   JavaDocException
+    /   JavaDocSince
+    /   JavaDocAuthor
 )
 
 JavaDocUML =
     "@uml" WhiteSpace+ 
 
 JavaDocParam =
-    "@param" WhiteSpace+ $n:($n:WordNumber WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    "@param" WhiteSpace+ $n:($n:Identifier WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
     {
         return {
             tag: "param",
             name: $n !== "" ? $n : null,
+            description: $d.length !== 0 ? $d.join("") : null
+        };
+    }
+
+JavaDocThrows =
+    "@throws" WhiteSpace+ $n:($n:Identifier WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    {
+        return {
+            tag: "throws",
+            classname: $n !== "" ? $n : null,
+            description: $d.length !== 0 ? $d.join("") : null
+        };
+    }
+
+JavaDocException =
+    "@exception" WhiteSpace+ $n:($n:Identifier WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    {
+        return {
+            tag: "exception",
+            classname: $n !== "" ? $n : null,
             description: $d.length !== 0 ? $d.join("") : null
         };
     }
@@ -210,6 +304,24 @@ JavaDocReturn =
     {
         return {
             tag: "return",
+            description: $d.length !== 0 ? $d.join("") : null
+        };
+    }
+
+JavaDocSince =
+    "@since" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    {
+        return {
+            tag: "since",
+            description: $d.length !== 0 ? $d.join("") : null
+        };
+    }
+
+JavaDocAuthor =
+    "@author" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    {
+        return {
+            tag: "author",
             description: $d.length !== 0 ? $d.join("") : null
         };
     }
@@ -240,6 +352,7 @@ DataTypeKeyword = (
     /   "long"
     /   "short"
     /   "void"
+    /   Identifier
 )
 
 ModifierKeyword = (

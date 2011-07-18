@@ -1,0 +1,226 @@
+[
+   {
+      "type": "interface",
+      "javaDoc": {
+         "param": [
+            {
+               "tag": "param",
+               "name": "sw",
+               "description": "wewe"
+            }
+         ]
+      },
+      "visibility": "public",
+      "name": "$Blah_wusa345",
+      "extend": "SomeClasss",
+      "implement": [
+         "test2",
+         "test23",
+         "dsjdsd"
+      ],
+      "body": {
+         "variable": [
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "classVar0",
+               "visibility": "public",
+               "modifier": [
+                  "static",
+                  "final"
+               ],
+               "array": false,
+               "generic": null,
+               "dataType": "int",
+               "value": "42"
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "testVar",
+               "visibility": "public",
+               "modifier": null,
+               "array": false,
+               "generic": null,
+               "dataType": "float",
+               "value": "23.3"
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "classVar007",
+               "visibility": "public",
+               "modifier": [
+                  "static"
+               ],
+               "array": false,
+               "generic": null,
+               "dataType": "String",
+               "value": "wusa"
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "testVar007",
+               "visibility": "public",
+               "modifier": null,
+               "array": false,
+               "generic": null,
+               "dataType": "String",
+               "value": "wusa2"
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "classVar1",
+               "visibility": "public",
+               "modifier": [
+                  "static"
+               ],
+               "array": false,
+               "generic": null,
+               "dataType": "int",
+               "value": null
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "classVar2",
+               "visibility": "private",
+               "modifier": [
+                  "static"
+               ],
+               "array": false,
+               "generic": null,
+               "dataType": "Object",
+               "value": null
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "instanceVar1",
+               "visibility": "public",
+               "modifier": null,
+               "array": false,
+               "generic": null,
+               "dataType": "Object",
+               "value": null
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "instanceVar2",
+               "visibility": "protected",
+               "modifier": null,
+               "array": false,
+               "generic": null,
+               "dataType": "int",
+               "value": null
+            },
+            {
+               "type": "variable",
+               "javaDoc": "",
+               "name": "instanceVar3",
+               "visibility": "private",
+               "modifier": null,
+               "array": false,
+               "generic": null,
+               "dataType": "Object",
+               "value": null
+            }
+         ],
+         "method": [
+            {
+               "type": "method",
+               "javaDoc": "",
+               "name": "Blah",
+               "visibility": "public",
+               "modifier": [
+                  "abstract"
+               ],
+               "dataType": "constructor",
+               "parameter": [],
+               "body": "
+        // ...implementation goes here...
+    "
+            },
+            {
+               "type": "method",
+               "javaDoc": "",
+               "name": "doSomething",
+               "visibility": "public",
+               "modifier": [
+                  "abstract"
+               ],
+               "dataType": "void",
+               "parameter": [],
+               "body": "
+        // ...implementation goes here...
+    "
+            },
+            {
+               "type": "method",
+               "javaDoc": {
+                  "since": {
+                     "tag": "since",
+                     "description": "1.5"
+                  },
+                  "throws": [
+                     {
+                        "tag": "throws",
+                        "classname": "wusaClass",
+                        "description": "descriptionsss"
+                     }
+                  ],
+                  "exception": [
+                     {
+                        "tag": "exception",
+                        "classname": "wusa2Class",
+                        "description": "sjdksdjskdjsk"
+                     }
+                  ],
+                  "param": [
+                     {
+                        "tag": "param",
+                        "name": "someParam",
+                        "description": "description"
+                     },
+                     {
+                        "tag": "param",
+                        "name": "superDude",
+                        "description": "lets have pfun!"
+                     }
+                  ],
+                  "return": {
+                     "tag": "return",
+                     "description": "that's a return description"
+                  }
+               },
+               "name": "doSomethingElse",
+               "visibility": "public",
+               "modifier": null,
+               "dataType": "Object",
+               "parameter": [
+                  {
+                     "modifier": "static",
+                     "generic": "T",
+                     "array": false,
+                     "dataType": "Object",
+                     "name": "someParam"
+                  },
+                  {
+                     "modifier": null,
+                     "generic": null,
+                     "array": true,
+                     "dataType": "wtest",
+                     "name": "me"
+                  }
+               ],
+               "body": "
+        // ...implementation goes here...
+    "
+            }
+         ]
+      }
+   }
+]

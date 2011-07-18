@@ -14,9 +14,9 @@
  */
 
 //test test test test
-public class Blah extends SomeClass {
+public interface $Blah_wusa345 extends SomeClasss implements test2, test23, dsjdsd {
     /** A class implementation comment can go here. */
-    public static int classVar0 = 42;
+    public static final int classVar0 = 42;
     public float testVar = 23.3;
     public static String classVar007 = "wusa";
     public String testVar007 = 'wusa2';
@@ -42,24 +42,27 @@ public class Blah extends SomeClass {
     /** 
      * ...constructor Blah documentation comment...
      */
-    public Blah() {
+    public abstract Blah() {
         // ...implementation goes here...
     }
 
     /**
      * ...method doSomething documentation comment...
      */
-    public void doSomething() {
+    public abstract void doSomething() {
         // ...implementation goes here... 
     }
 
     /**
      * ...method doSomethingElse documentation comment...
+     * @since 1.5
+     * @throws wusaClass descriptionsss
+     * @exception wusa2Class sjdksdjskdjsk
      * @param someParam description
      * @param superDude lets have pfun!
      * @return that's a return description
      */
-    public void doSomethingElse(Object someParam) {
+    public Object doSomethingElse(static Object<T> someParam, wtest[] me) {
         // ...implementation goes here... 
     }
 }
