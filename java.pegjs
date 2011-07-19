@@ -1,14 +1,21 @@
-
-
 /*
  * Implementation of the Java language
  * as a parser expression grammar
  */
 
 start =
+    File
+
+File =
+    $p:(__ "package" __ !";" $p:Identifier __ ";" __ {return $p;})?
+    $i:(__ "import" __ !";" $i:[0-9A-Za-z_$.*]+ __ ";" __ {return $i.join("");})?
     __ $c:Class+ __ !.
     {
-        return $c;
+        return {
+            package: $p !== "" ? $p : null,
+            imports: $i !== "" ? $i : null,
+            classes: $c
+        };
     }
 
 Class =
@@ -27,8 +34,8 @@ Class =
             javaDoc: $jd != "" ? $jd : null,
             visibility: $v != "" ? $v : null,
             name: $n,
-            extend: $e,
-            implement: $i.length > 0 ? $i : null,
+            extend: $e !== "" ? $e : null,
+            implement: $i,
             body: $b
         };
     }
@@ -69,10 +76,10 @@ Method =
     {
         return {
             type: "method",
-            javaDoc: $jd,
+            javaDoc: $jd !== "" ? $jd : null,
             name: $n,
             visibility: $v,
-            modifier: $m.length > 0 ? $m : null,
+            modifier: $m,
             dataType: $d !== "" ? $d.dataType : "constructor",
             parameter: $pl,
             body: $b.join("")
@@ -96,10 +103,10 @@ Variable =
         
         return {
             type: "variable",
-            javaDoc: $jd,
+            javaDoc: $jd !== "" ? $jd : null,
             name: $n,
             visibility:  $v,
-            modifier: $m.length >0 ? $m : null,
+            modifier: $m,
             array: $d ? $d.array : null,
             generic: $d ? $d.generic : null,
             dataType: $d ? $d.dataType : null,
@@ -208,52 +215,21 @@ JavaDocComment =
         var comment = {};
         //format array to an more readable object
         for(var i=0; i<$p.length; i++) {
-            //add param object
-            if($p[i].tag == "param") {
+            var tag = $p[i].tag;
+
+            if(tag !== "return" || tag !== "since") {
                 ++index;
-                //create param array if doesn't exists
-                if(!comment["param"]) comment["param"] = [];
-                //push object into array
-                comment.param.push($p[i]);
-            }
-            //add throws object
-            else if($p[i].tag == "throws") {
-                ++index;
-                //create throws array if doesn't exists
-                if(!comment["throws"]) comment["throws"] = [];
-                //push object into array
-                comment.throws.push($p[i]);
-            }
-            //add exception object
-            else if($p[i].tag == "exception") {
-                ++index;
-                //create exception array if doesn't exists
-                if(!comment["exception"]) comment["exception"] = [];
-                //push object into array
-                comment.exception.push($p[i]);
-            }
-            //add author object
-            else if($p[i].tag == "author") {
-                ++index;
-                //create author array if doesn't exists
-                if(!comment["author"]) comment["author"] = [];
-                //push object into array
-                comment.author.push($p[i]);
-            }
-            //add return object
-            else if($p[i].tag == "return") {
+                //create specific tag array if doesn't exists
+                if(!comment[tag]) comment[tag] = [];
+                //push tag into array
+                comment[tag].push($p[i]);
+            } else {
                 ++index;
                 //return is only allowed once
-                comment["return"] = $p[i];
-            }
-            //add since object
-            else if($p[i].tag == "since") {
-                ++index;
-                //return is only allowed once
-                comment["since"] = $p[i];
+                comment[tag] = $p[i];
             }
         }
-
+        
         return index == 0 ? null : comment;
     }
 
@@ -264,6 +240,7 @@ JavaDocTag = (
     /   JavaDocException
     /   JavaDocSince
     /   JavaDocAuthor
+    /   JavaDocSee
 )
 
 JavaDocUML =
@@ -322,6 +299,15 @@ JavaDocAuthor =
     {
         return {
             tag: "author",
+            description: $d.length !== 0 ? $d.join("") : null
+        };
+    }
+
+JavaDocSee =
+    "@see" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    {
+        return {
+            tag: "see",
             description: $d.length !== 0 ? $d.join("") : null
         };
     }
