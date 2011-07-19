@@ -639,6 +639,7 @@ li.File.selected .title {
             background: none;
             border:  none;
             margin: 2px 4px;
+            -webkit-user-select: text;
         }
 
         .Class .component.text .input.selected {

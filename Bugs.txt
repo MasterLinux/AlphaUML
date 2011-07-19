@@ -1,0 +1,2 @@
+Wenn Operation/Class oder Attribute umbenannt wird und man die Pfeiltasten nutzt, wird klasse verschoben aber der Textcursor bewegt sich nicht
+Textinput beim umbenennen kann nicht geklickt werden. keine selektion möglich
