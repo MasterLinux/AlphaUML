@@ -765,6 +765,10 @@ li.File.selected .title {
     z-index: 95;
 }
 
+    .Line.dashed {
+        background: url("images/tools/dashed_line.png");
+    }
+
     .Line.selected,
     .Point.selected,
     .Line.hovered,
@@ -948,6 +952,10 @@ li.File.selected .title {
                     float: left;
                     margin: 11px 0 0 0;
                 }
+
+                    .Dialog .body .preview .row .line.dashed {
+                        background: url("images/tools/dashed_line.png");
+                    }
 
                 .Dialog .body .preview .row .spacer {
                     height: 2px;
@@ -1291,7 +1299,14 @@ li.File.selected .title {
             border-bottom: #3f3f3f 1px solid;
             border-top: #ffffff 1px solid;
             padding: 2px 0 4px 0;
+            -webkit-user-select: none;
         }
+
+            .List .body .entry.selected {
+                background: #50b730;
+                border-bottom: #245f11 1px solid;
+                border-top: #c3fcb1 1px solid;
+            }
 
         .List .body .entry:first-child {
             border-top: none;
@@ -1325,3 +1340,17 @@ li.File.selected .title {
                 -webkit-border-radius: 3px;
                 -webkit-box-shadow: 1px 1px 1px #3f3f3f;
             }
+
+            .List .body .entry .select {
+                margin: 1px 2px;
+                float: left;
+                width: 14px;
+                height: 14px;
+                background: url("images/icons/select_14x14.png") no-repeat;
+                -webkit-border-radius: 3px;
+                -webkit-box-shadow: 1px 1px 1px #3f3f3f;
+            }
+
+                .List .body .entry .select.selected {
+                    background: url("images/icons/select_14x14_selected.png") no-repeat;
+                }
