@@ -1,6 +1,6 @@
 {
    "package": "packageName",
-   "imports": "path",
+   "imports": ["path"],
    "classes": [
       {
          "type": "interface",

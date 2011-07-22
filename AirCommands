@@ -1,2 +1,2 @@
 adt -certificate -cn SelfSigned 1024-RSA AlphaUMLCert.pfx jehova
-adt -package -storetype pkcs12 -keystore AlphaUMLCert.pfx AlphaUML.air AlphaUML-app.xml AlphaUML.html config.json FileTreeTest frameworks lib themes
+adt -package -storetype pkcs12 -keystore AlphaUMLCert.pfx -target native AlphaUML.exe AlphaUML-app.xml AlphaUML.html config.json FileTreeTest frameworks lib themes

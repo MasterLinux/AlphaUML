@@ -22,6 +22,7 @@ File =
 Class =
     $jd:JavaDocComment? __
     $v:VisibilityKeyword? __
+    $m:($m:ModifierKeyword __ {return $m;})*
     $t:("class"/"interface"/"enum") __
     $n:Identifier __
     $e:("extends" __ $e:Identifier __ {return $e;})?
@@ -34,6 +35,7 @@ Class =
             type: $t,
             javaDoc: $jd != "" ? $jd : null,
             visibility: $v != "" ? $v : null,
+            modifier: $m,
             name: $n,
             extend: $e !== "" ? $e : null,
             implement: $i,
