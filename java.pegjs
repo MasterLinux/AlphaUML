@@ -7,8 +7,9 @@ start =
     File
 
 File =
+    JavaDocComment? __
     $p:(__ "package" __ !";" $p:Identifier __ ";" __ {return $p;})?
-    $i:(__ "import" __ !";" $i:[0-9A-Za-z_$.*]+ __ ";" __ {return $i.join("");})?
+    $i:(__ "import" __ !";" $i:[0-9A-Za-z_$.*]+ __ ";" __ {return $i.join("");})*
     __ $c:Class+ __ !.
     {
         return {
@@ -67,7 +68,7 @@ ClassBody =
 
 Method =
     $jd:JavaDocComment? __
-    $v:VisibilityKeyword __
+    $v:($v:VisibilityKeyword __ {return $v;})?
     $m:($m:ModifierKeyword __ {return $m;})*
     $d:($d:DataType __ !"(" __ {return $d;})?
     $n:Identifier __
@@ -78,9 +79,11 @@ Method =
             type: "method",
             javaDoc: $jd !== "" ? $jd : null,
             name: $n,
-            visibility: $v,
+            visibility: $v !== "" ? $v : null,
             modifier: $m,
             dataType: $d !== "" ? $d.dataType : "constructor",
+            generic: $d !== "" ? $d.generic : null,
+            array: $d !== "" ? $d.array : null,
             parameter: $pl,
             body: $b.join("")
         };
@@ -88,7 +91,7 @@ Method =
 
 Variable =
     $jd:JavaDocComment? __
-    $v:VisibilityKeyword __
+    $v:($v:VisibilityKeyword __ {return $v;})?
     $m:($m:ModifierKeyword __ {return $m;})*
     $d:DataType __ !("="/";") __
     $n:Identifier __
@@ -105,7 +108,7 @@ Variable =
             type: "variable",
             javaDoc: $jd !== "" ? $jd : null,
             name: $n,
-            visibility:  $v,
+            visibility: $v !== "" ? $v : null,
             modifier: $m,
             array: $d ? $d.array : null,
             generic: $d ? $d.generic : null,
@@ -151,12 +154,13 @@ JavaDigit =
     [0-9]
 
 Parameter =
-    $m:($m:ModifierKeyword __ {return $m;})?
+    $m:($m:ModifierKeyword __ {return $m;})*
     $d:DataType __
     $n:Identifier __
     {
         return {
-            modifier: $m !== "" ? $m : null,
+            type: "parameter",
+            modifier: $m,
             generic: $d.generic,
             array: $d.array,
             dataType: $d.dataType,
