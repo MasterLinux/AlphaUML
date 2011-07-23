@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Round-trip engineering}{1}
+\contentsline {subsection}{\numberline {1.1}Reverse engineering}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Parser}{2}
+\contentsline {subsubsection}{\numberline {1.1.2}Parser grammar rules}{2}
+\contentsline {subsubsection}{\numberline {1.1.3}Parser grammar example}{3}
+\contentsline {subsubsection}{\numberline {1.1.4}Parser output}{4}
+\contentsline {subsubsection}{\numberline {1.1.5}Class diagram generation}{7}
+\contentsline {subsection}{\numberline {1.2}Forward engineering}{7}
+\contentsline {subsubsection}{\numberline {1.2.1}Generalization}{7}
+\contentsline {subsubsection}{\numberline {1.2.2}Binary association}{8}
+\contentsline {subsubsection}{\numberline {1.2.3}Provided interfaces}{9}
+\contentsline {subsubsection}{\numberline {1.2.4}Required interfaces}{9}
+\contentsline {subsubsection}{\numberline {1.2.5}Extended interfaces}{9}

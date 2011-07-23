@@ -1,0 +1,1 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces The class diagram shows the superclass “UIObject” and two subclasses which inherits from it. Moreover the class “Dialog” overrides the operation “setUIType” and implements some other methods.}}{8}
