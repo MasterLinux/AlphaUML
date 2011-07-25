@@ -444,6 +444,14 @@ li.File.selected .title {
             background: url("images/icons/association_hover.png");
         }
 
+        .Tools .button.rte {
+            background: url("images/icons/rte.png");
+        }
+
+        .Tools .button.rte:hover {
+            background: url("images/icons/rte_hover.png");
+        }
+
 .Class {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);

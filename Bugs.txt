@@ -3,4 +3,3 @@ Textinput beim umbenennen kann nicht geklickt werden. keine selektion möglich
 eckige klammern < und > bei datentyp wird nicht angezeigt. da als html tag interpretiert. Bie vorschau und in diagram ansicht mit html sonderzeichen ersetzen
 java grammatik unterstützt keine abstrakten methoden!!
 java grammatik array typ bei attributes überprüfen
-too much recursion wenn context menu von connectoren geöffnet werden sollen
