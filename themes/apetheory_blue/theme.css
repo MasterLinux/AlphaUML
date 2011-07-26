@@ -253,6 +253,10 @@ li.File.selected .title {
             margin: 4px 6px 0 6px;
         }
 
+    .Tab.accent .button {
+        background: url("images/ui/tab_accent.png") repeat-x;
+    }
+
     .Tab:Hover .button,
     .Tab.selected .button {
         text-shadow: -1px -1px 0px #3f3f3f;
@@ -261,8 +265,17 @@ li.File.selected .title {
         border-right: #505050 1px solid;
     }
 
-    .Tab.selected .button {
+    .Tab.selected .button,
+    .Tab.accent.selected .button {
         font-family: DroidSansBold !important;
+    }
+
+    .Tab.accent:hover .button,
+    .Tab.accent.selected .button {
+        text-shadow: -1px -1px 0px #3f3f3f;
+        color: #ffffff;
+        background: url("images/ui/tab_accent_hover.png") repeat-x;
+        border-right: #505050 1px solid;
     }
 
     .Tab .close {
@@ -912,6 +925,9 @@ li.File.selected .title {
     }
 
         .Dialog .body .content {
+            width: 100%;
+            float: left;
+            clear: both;
         }
 
             .Dialog .body .content .cntBody {
@@ -1070,28 +1086,33 @@ li.File.selected .title {
         -webkit-border-bottom-left-radius: 5px;
         -webkit-border-bottom-right-radius: 5px;
         -webkit-user-select: none;
+        padding-top: 8px;
     }
 
-        .Dialog .footer .button {
-            background: #053f70;
-            color: #ededed;
-            padding: 2px 4px;
-            margin: 2px;
-            -webkit-border-radius: 4px;
-            -webkit-user-select: none;
+    .Dialog .execButton {
+        background: #053f70;
+        color: #ededed;
+        padding: 2px 4px;
+        margin: 2px;
+        -webkit-border-radius: 4px;
+        -webkit-user-select: none;
+    }
+
+    .Dialog .execButton.clear {
+        clear: both;
+    }
+
+    .Dialog .execButton:hover {
+        background: #336699;
+    }
+
+        .Dialog .execButton.left {
+            float: left;
         }
 
-        .Dialog .footer .button:hover {
-            background: #336699;
+        .Dialog .execButton.right {
+            float: right;
         }
-
-            .Dialog .footer .button.left {
-                float: left;
-            }
-
-            .Dialog .footer .button.right {
-                float: right;
-            }
 
 .TextInput {
     position: relative;
@@ -1127,7 +1148,7 @@ li.File.selected .title {
         clear: right;
     }
 
-        .TextInput .buttons .button {
+        .TextInput .buttons .ddButton {
             float: left;
             height: 19px;
             -webkit-border-top-right-radius: 4px;
@@ -1135,21 +1156,21 @@ li.File.selected .title {
             -webkit-box-shadow: 0px 0px 1px #1f1f1f;
         }
 
-            .TextInput .buttons .button.title {
+            .TextInput .buttons .ddButton.title {
                 padding: 2px;
                 background: #336699;
                 color: #D7D7D7;
             }
 
-            .TextInput .buttons .button.icon {
+            .TextInput .buttons .ddButton.icon {
                 width: 19px;
             }
 
-                .TextInput .buttons .button.icon.arrow {
+                .TextInput .buttons .ddButton.icon.arrow {
                     background: url("images/icons/drop_down_arrow.png") no-repeat;
                 }
 
-                .TextInput .buttons .button.icon.arrow:hover {
+                .TextInput .buttons .ddButton.icon.arrow:hover {
                     background: url("images/icons/drop_down_arrow_hover.png") no-repeat;
                 }
 

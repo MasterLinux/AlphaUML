@@ -14,7 +14,7 @@
  */
 
 //test test test test
-public class Audi implements Car {
+public class AudiR8 implements Car {
     /** A class implementation comment can go here. */
     private int maxKmh = 320;
     private String name = "Audi R8";
@@ -24,7 +24,7 @@ public class Audi implements Car {
     /** 
      * ...constructor Blah documentation comment...
      */
-    public abstract Audi() {
+    public Audi() {
         this.needsFuel = true;
     }
 

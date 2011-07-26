@@ -75,7 +75,7 @@ Method =
     $d:($d:DataType __ !"(" __ {return $d;})?
     $n:Identifier __
     "(" $pl:ParameterList ")" __
-    "{" $b:(!"}" $b:. {return $b;})* "}"
+    $b:(("{" $b:(!"}" $b:. {return $b;})* "}" {return $b;}) / (__ ";" __ {return "";})) 
     {
         return {
             type: "method",
@@ -87,7 +87,7 @@ Method =
             generic: $d !== "" ? $d.generic : null,
             array: $d !== "" ? $d.array : null,
             parameter: $pl,
-            body: $b.join("")
+            body: $b && $b !== "" ? $b.join("") : null
         };
     }
 

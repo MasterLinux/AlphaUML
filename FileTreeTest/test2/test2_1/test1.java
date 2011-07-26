@@ -2,6 +2,7 @@ public class Wheel {
     /** A class implementation comment can go here. */
     private int inch = 20;
     protected String name = "SuperAlu";
+    public char id = 'd';
     private float weight;
     protected Audi[] car;
     private Car audi;
@@ -9,7 +10,7 @@ public class Wheel {
     /** 
      * ...constructor Blah documentation comment...
      */
-    public abstract Wheel(int weight) {
+    public Wheel(int weight) {
         this.weight = weight;
     }
 

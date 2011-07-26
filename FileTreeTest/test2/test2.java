@@ -34,5 +34,5 @@ public interface Car {
      * @param superDude lets have pfun!
      * @return that's a return description
      */
-    public abstract void openDoors(static Door<DoorType>[] doors, int angle){}
+    public abstract void openDoors(static Door<DoorType>[] doors, int angle);
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://ns.adobe.com/air/application/2.7">
     <id>net.apetheory.AlphaUML</id>
-    <versionNumber>0.4</versionNumber>
+    <versionNumber>0.5</versionNumber>
     <filename>AlphaUML</filename>
-    <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+    <supportedProfiles>extendedDesktop</supportedProfiles>
 
     <initialWindow>
         <content>AlphaUML.html</content>
@@ -11,6 +11,6 @@
         <width>800</width>
         <height>600</height>
     </initialWindow>
-    <versionLabel>0.4 Alpha</versionLabel>
-    <name>AlphaUML v0.4_alpha</name>
+    <versionLabel>0.5 Alpha</versionLabel>
+    <name>AlphaUML v0.5_alpha</name>
 </application>
