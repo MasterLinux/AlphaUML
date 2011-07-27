@@ -10,7 +10,12 @@
  * disclose such Confidential Information and shall use it only in
  * accordance with the terms of the license agreement you entered into
  * with Sun.
- @param sw wewe
+ * @umlPos x:60 y:50
+ * @umlProject root:dsds main:wsds:sd\/
+ * @umlIgnore sdsd
+ * @umlIgnore sdsd
+ * @umlTitle wesd
+ * @see ere
  */
 
 //test test test test

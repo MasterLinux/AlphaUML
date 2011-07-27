@@ -7,7 +7,6 @@ start =
     File
 
 File =
-    JavaDocComment? __
     $p:(__ "package" __ !";" $p:Identifier __ ";" __ {return $p;})?
     $i:(__ "import" __ !";" $i:[0-9A-Za-z_$.*]+ __ ";" __ {return $i.join("");})*
     __ $c:Class+ __ !.
@@ -177,6 +176,9 @@ ParameterList = (
     }
 )*
 
+FilePath =
+    ([a-zA-Z0-9-_:] / "/" / "\\")+
+
 WhiteSpace
   = [\t\v\f \u00A0\uFEFF]
   / Space
@@ -223,7 +225,7 @@ JavaDocComment =
         for(var i=0; i<$p.length; i++) {
             var tag = $p[i].tag;
 
-            if(tag !== "return" || tag !== "since") {
+            if(tag !== "return" || tag !== "since" || tag !== "umlPos") {
                 ++index;
                 //create specific tag array if doesn't exists
                 if(!comment[tag]) comment[tag] = [];
@@ -247,6 +249,10 @@ JavaDocTag = (
     /   JavaDocSince
     /   JavaDocAuthor
     /   JavaDocSee
+    /   JavaDocUmlPos
+    /   JavaDocUmlIgnore
+    /   JavaDocUmlProject
+    /   JavaDocUmlTitle
 )
 
 JavaDocUML =
@@ -316,6 +322,47 @@ JavaDocSee =
             tag: "see",
             description: $d.length !== 0 ? $d.join("") : null
         };
+    }
+
+/* uml specific javadoc tags */
+JavaDocUmlPos =
+    "@umlPos" __ $x:("x:" __ $x:[0-9]+ {return $x;}) __ $y:("y:" __ $y:[0-9]+ {return $y;}) EndOfLine
+    {
+        return {
+            tag: "umlPos",
+            x: $x.join(""),
+            y: $y.join("")
+        };
+    }
+
+JavaDocUmlIgnore =
+    "@umlIgnore" WhiteSpace+ $p:(!EndOfLine $p:. {return $p;})* EndOfLine
+    {
+        return {
+            tag: "umlIgnore",
+            path: $p.join("")
+        }
+    }
+
+JavaDocUmlProject =
+    "@umlProject" __ 
+    $r:("root:" __ $r:FilePath WhiteSpace+ {return $r;})
+    $m:("main:" __ $m:FilePath WhiteSpace* {return $m;}) EndOfLine
+    {
+        return {
+            tag: "umlProject",
+            root: $r.join(""),
+            main: $m.join("")
+        }
+    }
+
+JavaDocUmlTitle =
+    "@umlTitle" WhiteSpace+ $t:(!EndOfLine $t:. {return $t;})* EndOfLine
+    {
+        return {
+            tag: "umlTitle",
+            title: $t.join("")
+        }
     }
 
 /*
