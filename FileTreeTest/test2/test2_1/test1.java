@@ -29,6 +29,10 @@ public class Wheel {
      * @param someParam description
      * @param superDude lets have pfun!
      * @return that's a return description
+     * @umlPos x:23 y:23
+     * @umlIgnore sdsdsd
+     * @umlProject root:sdsdsd main:sdsdsd
+     * @umlTitle msdsd
      */
     private void fly() {
         // ...implementation goes here... 

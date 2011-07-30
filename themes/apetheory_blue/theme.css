@@ -885,7 +885,7 @@ li.File.selected .title {
 }
 
     .Dialog .inner {
-        margin: 4px;
+        margin: 2px;
         -webkit-border-radius: 5px;
         float: left;
         clear: both;
@@ -895,7 +895,7 @@ li.File.selected .title {
         width: 100%;
         float: left;
         clear: both;
-        background: #053f70;
+        background: url("images/ui/class_header_bg.png") repeat-x;
         -webkit-border-top-left-radius: 5px;
         -webkit-border-top-right-radius: 5px;
         -webkit-user-select: none;
@@ -911,10 +911,14 @@ li.File.selected .title {
             width: 16px;
             height: 16px;
             float: right;
-            background: #ff0011;
+            background: url("images/ui/dialog_close.png") no-repeat;
             -webkit-border-radius: 4px;
             margin: 3px;
         }
+
+            .Dialog .header .close:hover {
+                background: url("images/ui/dialog_close_hover.png") no-repeat;
+            }
 
     .Dialog .body {
         float: left;
@@ -1090,12 +1094,15 @@ li.File.selected .title {
     }
 
     .Dialog .execButton {
-        background: #053f70;
-        color: #ededed;
+        height: 18px;
+        background: url("images/ui/button.png") repeat-x;
+        color: #131313;
         padding: 2px 4px;
-        margin: 2px;
+        margin: 3px;
         -webkit-border-radius: 4px;
         -webkit-user-select: none;
+        -webkit-box-shadow: 1px 1px 1px #131313;
+        border: 1px solid #aaaaaa;
     }
 
     .Dialog .execButton.clear {
@@ -1103,7 +1110,8 @@ li.File.selected .title {
     }
 
     .Dialog .execButton:hover {
-        background: #336699;
+        background: url("images/ui/button_hover.png") repeat-x;
+        border: 1px solid #053f70;
     }
 
         .Dialog .execButton.left {
@@ -1383,3 +1391,44 @@ li.File.selected .title {
                 .List .body .entry .select.selected {
                     background: url("images/icons/select_14x14_selected.png") no-repeat;
                 }
+
+.Note {
+    position: absolute;
+    background: #ffd700;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
+    -webkit-user-select: none;
+    cursor: default;
+    font-size: 14px;
+}
+
+    .Note .icon {
+        width: 24px;
+        height: 24px;
+        float: left;
+        -webkit-border-radius: 4px;
+        -webkit-box-shadow: 1px 1px 1px #3f3f3f;
+        margin: 3px;
+    }
+
+        .Note .icon.drag {
+            background: url("images/icons/drag.png") no-repeat;
+        }
+
+        .Note .icon.drag:hover {
+            background: url("images/icons/drag_hover.png") no-repeat;
+        }
+
+    .Note .title {
+        float: left;
+        color: #b8860b;
+        font-size: 20px;
+        margin: 6px 0 0 2px;
+        text-shadow: -1px -1px 1px #313131;
+    }
+
+    .Note .comment {
+        background: none;
+        border: 1px solid #b8860b;
+        margin: 4px;
+    }

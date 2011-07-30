@@ -1,3 +1,6 @@
+
+
+
 /*
  * Implementation of the Java language
  * as a parser expression grammar
@@ -179,6 +182,9 @@ ParameterList = (
 FilePath =
     ([a-zA-Z0-9-_:] / "/" / "\\")+
 
+Word =
+    ([a-zA-Z0-9-_:.!?"'§$%&/()='] / "/" / "\\")+ 
+
 WhiteSpace
   = [\t\v\f \u00A0\uFEFF]
   / Space
@@ -212,15 +218,23 @@ SingleLineComment =
     }
 
 JavaDocComment =
-    "/**"
-    $p:(
-            (!("*/" / JavaDocTag) .)* {return null;}
-        /   JavaDocTag
-    )*
+    "/**" __ 
+    $d:((!("*/" / JavaDocTag / EndOfLine) $d:. {return $d;}) / (WhiteSpace / EndOfLine {return " "}))* __
+    $p:JavaDocTag* __
     "*/"
     {
         var index = 0;
         var comment = {};
+
+        //add javadoc comment
+        if($d !== "") {
+            ++index;
+            comment["description"] = {
+                tag: "description",
+                description: $d.join("")
+            }
+        }
+
         //format array to an more readable object
         for(var i=0; i<$p.length; i++) {
             var tag = $p[i].tag;
@@ -237,7 +251,7 @@ JavaDocComment =
                 comment[tag] = $p[i];
             }
         }
-        
+
         return index == 0 ? null : comment;
     }
 
@@ -255,11 +269,11 @@ JavaDocTag = (
     /   JavaDocUmlTitle
 )
 
-JavaDocUML =
-    "@uml" WhiteSpace+ 
-
 JavaDocParam =
-    "@param" WhiteSpace+ $n:($n:Identifier WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@param" __
+    $n:Identifier? __
+    $d:(!"*/" $d:Word __ {return $d;})*
     {
         return {
             tag: "param",
@@ -269,7 +283,10 @@ JavaDocParam =
     }
 
 JavaDocThrows =
-    "@throws" WhiteSpace+ $n:($n:Identifier WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@throws" __
+    $n:Identifier? __
+    $d:(!"*/" $d:Word __ {return $d;})*
     {
         return {
             tag: "throws",
@@ -279,7 +296,10 @@ JavaDocThrows =
     }
 
 JavaDocException =
-    "@exception" WhiteSpace+ $n:($n:Identifier WhiteSpace+ {return $n;})? $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@exception" __
+    $n:Identifier? __
+    $d:(!"*/" $d:Word __ {return $d;})*
     {
         return {
             tag: "exception",
@@ -289,7 +309,9 @@ JavaDocException =
     }
 
 JavaDocReturn =
-    "@return" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@return" __
+    $d:(!"*/" $d:Word __ {return $d;})*
     {
         return {
             tag: "return",
@@ -298,7 +320,9 @@ JavaDocReturn =
     }
 
 JavaDocSince =
-    "@since" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@since" __
+    $d:(!"*/" $d:[0-9.] __ {return $d;})*
     {
         return {
             tag: "since",
@@ -307,7 +331,9 @@ JavaDocSince =
     }
 
 JavaDocAuthor =
-    "@author" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@author" __
+    $d:(!"*/" $d:Word __ {return $d;})*
     {
         return {
             tag: "author",
@@ -316,7 +342,9 @@ JavaDocAuthor =
     }
 
 JavaDocSee =
-    "@see" WhiteSpace+ $d:(!EndOfLine $d:. {return $d;})* EndOfLine
+    __ "*"? __
+    "@see" __
+    $d:(!"*/" $d:Word __ {return $d;})*
     {
         return {
             tag: "see",
@@ -326,7 +354,10 @@ JavaDocSee =
 
 /* uml specific javadoc tags */
 JavaDocUmlPos =
-    "@umlPos" __ $x:("x:" __ $x:[0-9]+ {return $x;}) __ $y:("y:" __ $y:[0-9]+ {return $y;}) EndOfLine
+    __ "*"? __
+    "@umlPos" __
+    $x:("x:" __ $x:[0-9]+ {return $x;}) __
+    $y:("y:" __ $y:[0-9]+ {return $y;})
     {
         return {
             tag: "umlPos",
@@ -336,18 +367,21 @@ JavaDocUmlPos =
     }
 
 JavaDocUmlIgnore =
-    "@umlIgnore" WhiteSpace+ $p:(!EndOfLine $p:. {return $p;})* EndOfLine
+    __ "*"? __
+    "@umlIgnore" __
+    $i:(!"*/" $i:FilePath {return $i;})
     {
         return {
             tag: "umlIgnore",
-            path: $p.join("")
+            path: $i.join("")
         }
     }
 
 JavaDocUmlProject =
-    "@umlProject" __ 
-    $r:("root:" __ $r:FilePath WhiteSpace+ {return $r;})
-    $m:("main:" __ $m:FilePath WhiteSpace* {return $m;}) EndOfLine
+    __ "*"? __
+    "@umlProject" __
+    $r:("root:" __ $r:FilePath WhiteSpace+ {return $r;}) __
+    $m:("main:" __ $m:FilePath WhiteSpace* {return $m;})
     {
         return {
             tag: "umlProject",
@@ -357,7 +391,9 @@ JavaDocUmlProject =
     }
 
 JavaDocUmlTitle =
-    "@umlTitle" WhiteSpace+ $t:(!EndOfLine $t:. {return $t;})* EndOfLine
+    __ "*"? __
+    "@umlTitle" __
+    $t:(!"*/" $t:[a-zA-Z0-9_-] {return $t;})*
     {
         return {
             tag: "umlTitle",
