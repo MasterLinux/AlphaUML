@@ -10,15 +10,13 @@
  * disclose such Confidential Information and shall use it only in
  * accordance with the terms of the license agreement you entered into
  * with Sun.
- * @umlPos x:60 y:50
+ * @umlPos x:100 y:33
  * @umlProject root:dsds main:wsds:sd\/
  * @umlIgnore sdsd
  * @umlIgnore sdsd
  * @umlTitle wesd
  * @see ere
  */
-
-//test test test test
 public class AudiR8 implements Car {
     /** A class implementation comment can go here. */
     private int maxKmh = 320;

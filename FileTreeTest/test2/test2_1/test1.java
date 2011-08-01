@@ -1,3 +1,6 @@
+/**
+ * @umlPos x:631 y:232
+ */
 public class Wheel {
     /** A class implementation comment can go here. */
     private int inch = 20;

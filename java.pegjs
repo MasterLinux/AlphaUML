@@ -231,7 +231,7 @@ JavaDocComment =
             ++index;
             comment["description"] = {
                 tag: "description",
-                description: $d.join("")
+                description: $d.join("").replace(/\s*(\*)?\s+/g, " ")
             }
         }
 

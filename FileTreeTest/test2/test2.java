@@ -10,10 +10,8 @@
  * disclose such Confidential Information and shall use it only in
  * accordance with the terms of the license agreement you entered into
  * with Sun.
- @param sw wewe
+ * @umlPos x:150 y:350
  */
-
-//test test test test
 public interface Car {
     /** A class implementation comment can go here. */
     public int maxKmh;

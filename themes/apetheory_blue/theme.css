@@ -465,7 +465,8 @@ li.File.selected .title {
             background: url("images/icons/rte_hover.png");
         }
 
-.Class {
+.Class,
+.Note {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     -webkit-border-radius: 5px;
@@ -479,20 +480,27 @@ li.File.selected .title {
     background: rgba(15, 79, 17, 0.5);
 }
 
-    .Class .inner {
+.Note.selected {
+    background: rgba(177, 149, 0, 0.5);
+}
+
+    .Class .inner,
+    .Note .inner {
         margin: 3px;
         -webkit-border-radius: 5px;
         float: left;
         clear: both;
     }
 
-    .Class .toolbar {
+    .Class .toolbar,
+    .Note .toolbar {
         padding:  0 0 3px 0;
         float: left;
         clear: both;
     }
 
-    .Class .body {
+    .Class .body,
+    .Note .body {
         float: left;
         clear: both;
         background: #f0f0f0;
@@ -500,6 +508,12 @@ li.File.selected .title {
         width: 100%;
         -webkit-border-bottom-left-radius: 5px;
         -webkit-border-bottom-right-radius: 5px;
+    }
+
+    .Note .body {
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        background: #ffd700;
     }
 
         .Class .bodyHeader {
@@ -587,7 +601,8 @@ li.File.selected .title {
         margin: 0 2px;
     }
 
-    .Class .icon {
+    .Class .icon,
+    .Note .icon {
         width: 24px;
         height: 24px;
         float: left;
@@ -603,11 +618,13 @@ li.File.selected .title {
             background: url("images/icons/pin_hover.png") no-repeat;
         }
 
-        .Class .icon.drag {
+        .Class .icon.drag,
+        .Note .icon.drag {
             background: url("images/icons/drag.png") no-repeat;
         }
 
-        .Class .icon.drag:hover {
+        .Class .icon.drag:hover,
+        .Note .icon.drag:hover {
             background: url("images/icons/drag_hover.png") no-repeat;
         }
 
@@ -670,6 +687,12 @@ li.File.selected .title {
             border: 1px solid #aaaaaa;
         }
 
+.Note .comment {
+    background: none;
+    border: 1px solid #b8860b;
+    margin: 4px;
+}
+
 /* connector */
 .Point {
     width: 7px;
@@ -677,7 +700,7 @@ li.File.selected .title {
     background: #444444;
     position: absolute;
     -webkit-border-radius: 2px;
-    z-index: 100;
+    z-index: 95;
 }
 
     .Generalization.north {
@@ -685,7 +708,7 @@ li.File.selected .title {
         height: 15px;
         background: url("images/tools/generalization_north.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Generalization.east {
@@ -693,7 +716,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/generalization_east.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Generalization.south {
@@ -701,7 +724,7 @@ li.File.selected .title {
         height: 15px;
         background: url("images/tools/generalization_south.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Generalization.west {
@@ -709,7 +732,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/generalization_west.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Aggregation.north,
@@ -718,7 +741,7 @@ li.File.selected .title {
         height: 29px;
         background: url("images/tools/aggregation_north.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Aggregation.east,
@@ -727,7 +750,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/aggregation_east.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Composition.north,
@@ -736,7 +759,7 @@ li.File.selected .title {
         height: 29px;
         background: url("images/tools/composition_north.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Composition.east,
@@ -745,7 +768,7 @@ li.File.selected .title {
         height: 17px;
         background: url("images/tools/composition_east.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Association.north {
@@ -753,7 +776,7 @@ li.File.selected .title {
         height: 15px;
         background: url("images/tools/association_north.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Association.east {
@@ -761,7 +784,7 @@ li.File.selected .title {
         height: 18px;
         background: url("images/tools/association_east.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Association.south {
@@ -769,7 +792,7 @@ li.File.selected .title {
         height: 15px;
         background: url("images/tools/association_south.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
     .Association.west {
@@ -777,13 +800,13 @@ li.File.selected .title {
         height: 18px;
         background: url("images/tools/association_west.png") no-repeat;
         position: absolute;
-        z-index: 100;
+        z-index: 95;
     }
 
 .Line {
     position: absolute;
     background: #444444;
-    z-index: 95;
+    z-index: 90;
 }
 
     .Line.dashed {
@@ -1260,7 +1283,7 @@ li.File.selected .title {
     -webkit-box-shadow: 1px 1px 1px #000000;
     font-size: 12px;
     padding: 1px 2px;
-    z-index: 105;
+    z-index: 95;
 }
 
     .ConnectorLabel.rotated {
@@ -1391,44 +1414,3 @@ li.File.selected .title {
                 .List .body .entry .select.selected {
                     background: url("images/icons/select_14x14_selected.png") no-repeat;
                 }
-
-.Note {
-    position: absolute;
-    background: #ffd700;
-    -webkit-border-radius: 5px;
-    -webkit-box-shadow: 1px 1px 1px #1f1f1f;
-    -webkit-user-select: none;
-    cursor: default;
-    font-size: 14px;
-}
-
-    .Note .icon {
-        width: 24px;
-        height: 24px;
-        float: left;
-        -webkit-border-radius: 4px;
-        -webkit-box-shadow: 1px 1px 1px #3f3f3f;
-        margin: 3px;
-    }
-
-        .Note .icon.drag {
-            background: url("images/icons/drag.png") no-repeat;
-        }
-
-        .Note .icon.drag:hover {
-            background: url("images/icons/drag_hover.png") no-repeat;
-        }
-
-    .Note .title {
-        float: left;
-        color: #b8860b;
-        font-size: 20px;
-        margin: 6px 0 0 2px;
-        text-shadow: -1px -1px 1px #313131;
-    }
-
-    .Note .comment {
-        background: none;
-        border: 1px solid #b8860b;
-        margin: 4px;
-    }
