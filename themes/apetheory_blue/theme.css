@@ -117,6 +117,25 @@ li.File.selected .title {
     overflow: visible;
 }
 
+    .frameMessage {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 500;
+        background: #ffd700;
+        color: #313131;
+        -webkit-box-shadow: 0px 1px 2px #313131;
+        width: 100%;
+        padding: 3px;
+        text-align: center;
+        -webkit-user-select: none;
+        cursor: default;
+    }
+
+        .frameMessage:hover {
+            background: #daa520;
+        }
+
     .Frame .content,
     .Frame .tabBar,
     .Frame .menu {
@@ -370,8 +389,31 @@ li.File.selected .title {
     .Console .message {
         width: 100%;
         padding: 2px;
+        margin: 2px 0;
         min-height: 12px;
     }
+
+        .Console .message.error {
+            background: #b22222;
+            color: #f0f0f0;
+        }
+
+        .Console .message.warning {
+            background: #ffd700;
+            color: #1f1f1f;
+        }
+
+        .Console .message.success {
+            background: #245f11;
+            color: #f0f0f0;
+        }
+
+        .Console .message .tag {
+            background: #D7D7D7;
+            color: #1f1f1f;
+            padding: 2px;
+            margin: 2px 2px 2px 0;
+        }
 
 .Tools {
     float: left;
@@ -511,8 +553,6 @@ li.File.selected .title {
     }
 
     .Note .body {
-        -webkit-border-top-left-radius: 5px;
-        -webkit-border-top-right-radius: 5px;
         background: #ffd700;
     }
 
@@ -548,7 +588,8 @@ li.File.selected .title {
             margin: 1px 2px 0 2px;
         }
 
-    .Class .title {
+    .Class .title,
+    .Note .title {
         background: url("images/ui/class_header_bg.png") left top repeat-x, url("images/ui/class_header_bg_color.png");
         color: #BABABA;
         -webkit-border-top-left-radius: 5px;
@@ -558,22 +599,39 @@ li.File.selected .title {
         width: 100%
     }
 
-        .Class .title .first {
+    .Note .title {
+        background: #ffd700;
+        color: #3f3f3f;
+    }
+
+        .Class .title .first,
+        .Note .title .first {
             -webkit-border-top-left-radius: 5px;
             -webkit-border-top-right-radius: 5px;
         }
 
         .Class .title .name,
         .Class .title .abstract,
-        .Class .title .stereotype {
+        .Class .title .stereotype,
+        .Note .title .name {
             text-align: center;
             padding:  0 4px;
+        }
+
+        .Note .title .name {
+            padding-top: 4px;
         }
 
         .Class .title .name:hover,
         .Class .title .abstract:hover,
         .Class .title .stereotype:hover {
             background: #336699;
+        }
+
+        .Note .title .name:hover {
+            background: #daa520;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
         }
 
     .Class .operation,

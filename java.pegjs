@@ -1,6 +1,3 @@
-
-
-
 /*
  * Implementation of the Java language
  * as a parser expression grammar
@@ -10,7 +7,8 @@ start =
     File
 
 File =
-    $p:(__ "package" __ !";" $p:Identifier __ ";" __ {return $p;})?
+    __
+    $p:(__ "package" __ !";" $p:[0-9A-Za-z_$.*]+ __ ";" __ {return $p;})?
     $i:(__ "import" __ !";" $i:[0-9A-Za-z_$.*]+ __ ";" __ {return $i.join("");})*
     __ $c:Class+ __ !.
     {
@@ -231,7 +229,7 @@ JavaDocComment =
             ++index;
             comment["description"] = {
                 tag: "description",
-                description: $d.join("").replace(/\s*(\*)?\s+/g, " ")
+                description: $d.join("").replace(/\s*(\*)+\s+/g, "\n")
             }
         }
 
@@ -273,7 +271,7 @@ JavaDocParam =
     __ "*"? __
     "@param" __
     $n:Identifier? __
-    $d:(!"*/" $d:Word __ {return $d;})*
+    $d:(!"*/" $d:(Word / "*" {return ""}) __ {return $d;})*
     {
         return {
             tag: "param",
