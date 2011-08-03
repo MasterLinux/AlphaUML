@@ -79,6 +79,10 @@ li.File.selected .title {
             background: url("images/icons/java.png") no-repeat;
         }
 
+        li.File .icon.javaIgnored {
+            background: url("images/icons/java_ignored.png") no-repeat;
+        }
+
         li.File .icon.txt {
             background: url("images/icons/txt.png") no-repeat;
         }
