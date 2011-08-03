@@ -262,6 +262,7 @@ JavaDocTag = (
     /   JavaDocAuthor
     /   JavaDocSee
     /   JavaDocUmlPos
+    /   JavaDocUmlNotePos
     /   JavaDocUmlIgnore
     /   JavaDocUmlProject
     /   JavaDocUmlTitle
@@ -359,6 +360,19 @@ JavaDocUmlPos =
     {
         return {
             tag: "umlPos",
+            x: $x.join(""),
+            y: $y.join("")
+        };
+    }
+
+JavaDocUmlNotePos =
+    __ "*"? __
+    "@umlNotePos" __
+    $x:("x:" __ $x:[0-9]+ {return $x;}) __
+    $y:("y:" __ $y:[0-9]+ {return $y;})
+    {
+        return {
+            tag: "umlNotePos",
             x: $x.join(""),
             y: $y.join("")
         };

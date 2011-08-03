@@ -1,5 +1,5 @@
 /**
- * @(#)Blah.java        1.82 99/03/18
+ * @(#)Blah.javaeeee        1.82 99/03/18
  *
  * Copyright (c) 1994-1999 Sun Microsystems, Inc.
  * 901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
@@ -10,12 +10,14 @@
  * disclose such Confidential Information and shall use it only in
  * accordance with the terms of the license agreement you entered into
  * with Sun.
+ * thats rocks!!!!
  * @umlPos x:150 y:350
+ * @umlNotePos x:300 y:250
  */
 public interface Car {
     /** A class implementation comment can go here. */
     public int maxKmh;
-    public String name;
+    public String[] name;
     public boolean needsFuel;
 
     /**

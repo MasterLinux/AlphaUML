@@ -11,6 +11,7 @@
  * accordance with the terms of the license agreement you entered into
  * with Sun.
  * @umlPos x:100 y:33
+ * @umlNotePos x:200 y:50
  * @umlProject root:dsds main:wsds:sd\/
  * @umlIgnore sdsd
  * @umlIgnore sdsd

@@ -420,11 +420,27 @@ li.File.selected .title {
     list-style: none;
 }
 
+    .Tools .textInput {
+        float: left;
+        height: 24px;
+    }
+
+        .Tools .textInput input {
+            margin: 2px;
+            -webkit-border-radius: 5px;
+        }
+
+        .Tools .textInput input:focus {
+            outline: none;
+            background: #ffd700;
+            color: #1f1f1f;
+        }
+
     .Tools .button {
         float: left;
         width: 24px;
         height: 24px;
-        cursor: pointer;
+        cursor: default;
     }
 
         .Tools .button.search {
@@ -507,6 +523,14 @@ li.File.selected .title {
             background: url("images/icons/rte_hover.png");
         }
 
+        .Tools .button.note {
+            background: url("images/icons/note.png");
+        }
+
+        .Tools .button.note:hover {
+            background: url("images/icons/note_hover.png");
+        }
+
 .Class,
 .Note {
     position: absolute;
@@ -516,6 +540,7 @@ li.File.selected .title {
     -webkit-user-select: none;
     cursor: default;
     font-size: 14px;
+    z-index: 100;
 }
 
 .Class.selected {
@@ -1020,6 +1045,11 @@ li.File.selected .title {
                 padding: 2px 1px 5px 1px;
             }
 
+                .Dialog .body .content .cntBody .description {
+                    font-size: 12px;
+                    padding: 2px 3px;
+                }
+
             .Dialog .body .content .cntHeader {
                 border-bottom: #1f1f1f 1px solid;
                 padding: 2px 4px;
@@ -1472,3 +1502,25 @@ li.File.selected .title {
                 .List .body .entry .select.selected {
                     background: url("images/icons/select_14x14_selected.png") no-repeat;
                 }
+
+.Tooltip {
+    position: absolute;
+    z-index: 200;
+}
+
+    .Tooltip .connector {
+        background: url("images/ui/tooltip_connector.png") no-repeat;
+        margin: 0 0 0 10px;
+        width: 19px;
+        height: 10px;
+        clear: both;
+    }
+
+    .Tooltip .body {
+        background: #ffd700;
+        color: #131313;
+        padding: 2px 4px;
+        font-size: 12px;
+        -webkit-border-radius: 5px;
+        -webkit-box-shadow: 0px 1px 1px #313131;
+    }
