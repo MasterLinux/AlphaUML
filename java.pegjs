@@ -1,3 +1,4 @@
+
 /*
  * Implementation of the Java language
  * as a parser expression grammar
@@ -8,7 +9,7 @@ start =
 
 File =
     __
-    $p:(__ "package" __ !";" $p:[0-9A-Za-z_$.*]+ __ ";" __ {return $p;})?
+    $p:(__ "package" __ !";" $p:[0-9A-Za-z_$.*]+ __ ";" __ {return $p.join("");})?
     $i:(__ "import" __ !";" $i:[0-9A-Za-z_$.*]+ __ ";" __ {return $i.join("");})*
     __ $c:Class+ __ !.
     {
@@ -75,7 +76,7 @@ Method =
     $d:($d:DataType __ !"(" __ {return $d;})?
     $n:Identifier __
     "(" $pl:ParameterList ")" __
-    $b:(("{" $b:(!"}" $b:. {return $b;})* "}" {return $b;}) / (__ ";" __ {return "";})) 
+    $b:(MethodBody / (";" {return "";})) __
     {
         return {
             type: "method",
@@ -87,8 +88,20 @@ Method =
             generic: $d !== "" ? $d.generic : null,
             array: $d !== "" ? $d.array : null,
             parameter: $pl,
-            body: $b && $b !== "" ? $b.join("") : null
+            body: $b && $b !== "" ? $b : null
         };
+    }
+
+MethodBody =
+    "{" $b:(!("{" / "}") $b:. {return $b;} / FunctionBody)* "}"
+    {
+        return $b ? $b.join("") : "";
+    }
+
+FunctionBody =
+    "{" $f:(!"}" $f:. {return $f;})* "}"
+    {
+        return $f ? "{" + $f.join("") + "}" : "";
     }
 
 Variable =
@@ -217,7 +230,7 @@ SingleLineComment =
 
 JavaDocComment =
     "/**" __ 
-    $d:((!("*/" / JavaDocTag / EndOfLine) $d:. {return $d;}) / (WhiteSpace / EndOfLine {return " "}))* __
+    $d:((!("*/" / JavaDocTag / EndOfLine) $d:. {return $d;}) / (WhiteSpace / EndOfLine) {return " "})* __
     $p:JavaDocTag* __
     "*/"
     {

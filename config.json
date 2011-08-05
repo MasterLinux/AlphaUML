@@ -1,10 +1,1 @@
-{
-    "resolution": {
-        "width": 1024,
-        "height": 768
-    },
-    "frames": {
-        "leftWidth": 200,
-        "bottomHeight": 200
-    }
-}
+{"resolution":{"width":1024,"height":768},"frames":{"leftWidth":224,"bottomHeight":190},"javac":null,"javadoc":null,"project":"C:/xampp/htdocs/AlphaUML/ProjectExample"}

@@ -1069,7 +1069,6 @@ li.File.selected .title {
                 font-size: 12px;
                 text-align: center;
                 padding: 5px 0;
-                margin: 0 2px;
                 float: left;
                 clear: both;
             }
@@ -1082,10 +1081,15 @@ li.File.selected .title {
                     clear: none;
                 }
 
-                .Dialog .body .preview .row .class {
+                .Dialog .body .preview .row .class,
+                .Dialog .body .preview .row .umlClass {
                     float: left;
                     padding: 4px;
                     border: 1px solid #3f3f3f;
+                }
+
+                .Dialog .body .preview .row .umlClass {
+                    font-size: 14px;
                 }
 
                 .Dialog .body .preview .row .line {
@@ -1103,6 +1107,10 @@ li.File.selected .title {
                 .Dialog .body .preview .row .spacer {
                     height: 2px;
                     width: 175px;
+                    float: left;
+                }
+
+                .Dialog .body .preview .row .association.interface {
                     float: left;
                 }
 
@@ -1132,6 +1140,17 @@ li.File.selected .title {
                     position: absolute;
                     top: 18px;
                     left: 0px;
+                    width: 15px;
+                    height: 18px;
+                    float: left;
+                    margin: 3px 0 0 0;
+                }
+
+                .Dialog .body .preview .row .association.interface .west {
+                    background: url("images/tools/association_west.png") no-repeat;
+                    position: relative;
+                    top: 0;
+                    left: 0;
                     width: 15px;
                     height: 18px;
                     float: left;
