@@ -22,8 +22,8 @@ ul.tree {
 
     li.Folder .inner {
         position: relative;
-        max-height:18px;
-        height:18px;
+        max-height: 18px;
+        height: 18px;
         overflow: visible;
     }
 
@@ -35,7 +35,7 @@ ul.tree {
             position: absolute;
             top: 0px;
             left: 18px;
-            width: 28px;
+            width: 19px;
             height: 18px;
             margin: 1px 2px;
             background: url("images/icons/folder.png") no-repeat;
@@ -73,7 +73,7 @@ ul.tree {
         li.Folder .title {
             position: absolute;
             top: 1px;
-            left: 48px;
+            left: 40px;
             height: 18px;
             padding: 1px 1px 0 1px;
             font-size: 14px;
@@ -96,10 +96,9 @@ li.File.selected .title {
     li.File .icon {
         position: absolute;
         top: 0px;
-        left: 0px;
+        left: 30px;
         width: 19px;
         height: 18px;
-        margin: 1px 2px 0 40px;
         float: left;
     }
 
@@ -118,7 +117,7 @@ li.File.selected .title {
     li.File .title {
         position: absolute;
         top: 1px;
-        left: 60px;
+        left: 51px;
         height: 18px;
         padding: 1px 1px 0 1px;
         font-size: 14px;
@@ -1084,6 +1083,13 @@ li.File.selected .title {
                 .Dialog .body .content .cntBody .description {
                     font-size: 12px;
                     padding: 2px 3px;
+                }
+
+                .Dialog .body .content .cntBody .warning {
+                    font-size: 14px;
+                    padding: 2px 3px;
+                    background: #ffd700;
+                    color: #313131;
                 }
 
             .Dialog .body .content .cntHeader {
