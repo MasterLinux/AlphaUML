@@ -13,9 +13,18 @@ ul.tree {
     margin: 1px 0 1px 10px;
     list-style: none;
     -webkit-user-select: none;
+    overflow: visible;
+    clear: both;
 }
     ul.tree li {
-        overflow: hidden;
+        clear: both;
+    }
+
+    li.Folder .inner {
+        position: relative;
+        max-height:18px;
+        height:18px;
+        overflow: visible;
     }
 
     li.Folder.selected .title {
@@ -23,6 +32,9 @@ ul.tree {
     }
 
         li.Folder .icon {
+            position: absolute;
+            top: 0px;
+            left: 18px;
             width: 28px;
             height: 18px;
             margin: 1px 2px;
@@ -32,6 +44,9 @@ ul.tree {
 
         li.Folder .expand,
         li.Folder .fold {
+            position: absolute;
+            top: 0px;
+            left: 0px;
             width: 18px;
             height: 18px;
             margin: 1px 0;
@@ -56,6 +71,9 @@ ul.tree {
         }
 
         li.Folder .title {
+            position: absolute;
+            top: 1px;
+            left: 48px;
             height: 18px;
             padding: 1px 1px 0 1px;
             font-size: 14px;
@@ -68,7 +86,17 @@ li.File.selected .title {
     background: #cccccc;
 }
 
+    li.File .inner {
+        position: relative;
+        max-height:18px;
+        height:18px;
+        overflow: visible;
+    }
+
     li.File .icon {
+        position: absolute;
+        top: 0px;
+        left: 0px;
         width: 19px;
         height: 18px;
         margin: 1px 2px 0 40px;
@@ -88,6 +116,9 @@ li.File.selected .title {
         }
 
     li.File .title {
+        position: absolute;
+        top: 1px;
+        left: 60px;
         height: 18px;
         padding: 1px 1px 0 1px;
         font-size: 14px;
@@ -328,9 +359,10 @@ li.File.selected .title {
         }
 
 .HMenu {
-    height: 24px;
+    height: 23px;
     background: #ededed;
     list-style: none;
+    border-bottom: 1px solid #cccccc;
 }
 
 .HMenuBtn {
@@ -1314,6 +1346,14 @@ li.File.selected .title {
 
                 .TextInput .buttons .ddButton.icon.arrow:hover {
                     background: url("images/icons/drop_down_arrow_hover.png") no-repeat;
+                }
+
+                .TextInput .buttons .ddButton.icon.folder {
+                    background: url("images/icons/drop_down_folder.png") no-repeat;
+                }
+
+                .TextInput .buttons .ddButton.icon.folder:hover {
+                    background: url("images/icons/drop_down_folder_hover.png") no-repeat;
                 }
 
 .DropDownMenu {

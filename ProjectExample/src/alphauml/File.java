@@ -6,6 +6,8 @@ package alphauml;
 
 /**
  *
+ * @umlPos x:300 y:100
+ * @umlTitle TEst 2
  * @author MasterLinux
  */
 public class File {
