@@ -5,7 +5,8 @@
 package alphaumlsample;
 
 /**
- *
+ * @umlTitle AlphaUML Example
+ * @umlPos x:856 y:58
  * @author MasterLinux
  */
 public class AlphaUMLSample {    

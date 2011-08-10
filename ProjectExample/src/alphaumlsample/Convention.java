@@ -4,15 +4,18 @@
  */
 package alphaumlsample;
 
-import alphauml.File;
+import alphauml.Hero;
+import alphauml.Superman;
 import java.util.ArrayList;
 
 /**
- *
+ * @umlTitle AlphaUML Example
+ * @umlPos x:428 y:44
  * @author MasterLinux
  */
 public class Convention {
     public ArrayList<Nerd> nerds;
+    private Hero superman; 
     
     public Convention() {
         this.nerds = new ArrayList<Nerd>();        
@@ -34,8 +37,9 @@ public class Convention {
             output += this.nerds.get(i).theNerdLoves() + "\n";
         }
         
-        File file = new File();
-        output += file.path;
+        //create superman
+        superman = new Superman();
+        output += superman.name;
               
         return output;
     }

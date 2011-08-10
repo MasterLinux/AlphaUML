@@ -5,7 +5,8 @@
 package alphaumlsample;
 
 /**
- *
+ * @umlTitle AlphaUML Example
+ * @umlPos x:404 y:539
  * @author MasterLinux
  */
 public class Gadget {

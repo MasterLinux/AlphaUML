@@ -9,6 +9,12 @@ body {
     font-family: DroidSans;
 }
 
+.InitError {
+    background: #ff0011;
+    color: #f0f0f0;
+    font-size: 16px;
+}
+
 ul.tree {
     margin: 1px 0 1px 10px;
     list-style: none;

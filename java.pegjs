@@ -1,4 +1,6 @@
 
+
+
 /*
  * Implementation of the Java language
  * as a parser expression grammar
@@ -191,10 +193,16 @@ ParameterList = (
 )*
 
 FilePath =
-    ([a-zA-Z0-9-_:] / "/" / "\\")+
+    $f:([a-zA-Z0-9-_:] / "/" / "\\")+
+    {
+        return $f.join("");
+    }
 
 Word =
-    ([a-zA-Z0-9-_:.!?"'§$%&/()='] / "/" / "\\")+ 
+    $w:([a-zA-Z0-9-_:.!?"'§$%&/()=] / "/" / "\\")+
+    {
+        return $w.join("");
+    }
 
 WhiteSpace
   = [\t\v\f \u00A0\uFEFF]
@@ -231,7 +239,8 @@ SingleLineComment =
 JavaDocComment =
     "/**" __ 
     $d:((!("*/" / JavaDocTag / EndOfLine) $d:. {return $d;}) / (WhiteSpace / EndOfLine) {return " "})* __
-    $p:JavaDocTag* __
+    $p:(__ !"*/" $p:JavaDocTag __ {return $p;})*
+    (__ !"*/" "*" __)*
     "*/"
     {
         var index = 0;
@@ -242,7 +251,7 @@ JavaDocComment =
             ++index;
             comment["description"] = {
                 tag: "description",
-                description: $d.join("").replace(/\s*(\*)+\s+/g, "\n")
+                description: $d.join("").replace(/\s*(\*)+\s+/g, "\n").replace(/(\s+)$/, "")
             }
         }
 
@@ -281,16 +290,22 @@ JavaDocTag = (
     /   JavaDocUmlTitle
 )
 
+JavaDocWord =
+    $d:(!("*/") $d:($d:[a-zA-Z0-9'"-_!?] {return $d;} / " " {return " ";} / "/n" {return "/n";}) {return $d;})+
+    {
+        return $d.join("");
+    }
+
 JavaDocParam =
     __ "*"? __
     "@param" __
     $n:Identifier? __
-    $d:(!"*/" $d:(Word / "*" {return ""}) __ {return $d;})*
+    $d:JavaDocWord __
     {
         return {
             tag: "param",
             name: $n !== "" ? $n : null,
-            description: $d.length !== 0 ? $d.join("") : null
+            description: $d.length !== 0 ? $d.replace(/(\s+)$/, "") : null
         };
     }
 
@@ -298,12 +313,12 @@ JavaDocThrows =
     __ "*"? __
     "@throws" __
     $n:Identifier? __
-    $d:(!"*/" $d:Word __ {return $d;})*
+    $d:JavaDocWord __
     {
         return {
             tag: "throws",
             classname: $n !== "" ? $n : null,
-            description: $d.length !== 0 ? $d.join("") : null
+            description: $d.length !== 0 ? $d : null
         };
     }
 
@@ -311,30 +326,30 @@ JavaDocException =
     __ "*"? __
     "@exception" __
     $n:Identifier? __
-    $d:(!"*/" $d:Word __ {return $d;})*
+    $d:JavaDocWord __
     {
         return {
             tag: "exception",
             classname: $n !== "" ? $n : null,
-            description: $d.length !== 0 ? $d.join("") : null
+            description: $d.length !== 0 ? $d : null
         };
     }
 
 JavaDocReturn =
     __ "*"? __
     "@return" __
-    $d:(!"*/" $d:Word __ {return $d;})*
+    $d:JavaDocWord __
     {
         return {
             tag: "return",
-            description: $d.length !== 0 ? $d.join("") : null
+            description: $d.length !== 0 ? $d : null
         };
     }
 
 JavaDocSince =
     __ "*"? __
     "@since" __
-    $d:(!"*/" $d:[0-9.] __ {return $d;})*
+    $d:(!"*/" $d:[0-9.]* __ {return $d;})
     {
         return {
             tag: "since",
@@ -345,22 +360,22 @@ JavaDocSince =
 JavaDocAuthor =
     __ "*"? __
     "@author" __
-    $d:(!"*/" $d:Word __ {return $d;})*
+    $d:JavaDocWord __
     {
         return {
             tag: "author",
-            description: $d.length !== 0 ? $d.join("") : null
+            description: $d.length !== 0 ? $d : null
         };
     }
 
 JavaDocSee =
     __ "*"? __
     "@see" __
-    $d:(!"*/" $d:Word __ {return $d;})*
+    $d:JavaDocWord __
     {
         return {
             tag: "see",
-            description: $d.length !== 0 ? $d.join("") : null
+            description: $d.length !== 0 ? $d : null
         };
     }
 
@@ -398,7 +413,7 @@ JavaDocUmlIgnore =
     {
         return {
             tag: "umlIgnore",
-            path: $i.join("")
+            path: $i
         }
     }
 
@@ -410,15 +425,15 @@ JavaDocUmlProject =
     {
         return {
             tag: "umlProject",
-            root: $r.join(""),
-            main: $m.join("")
+            root: $r,
+            main: $m
         }
     }
 
 JavaDocUmlTitle =
     __ "*"? __
     "@umlTitle" __
-    $t:(!"*/" $t:[a-zA-Z0-9_-] {return $t;})*
+    $t:(!"*/" $t:([a-zA-Z0-9_-] / " ") {return $t;})*
     {
         return {
             tag: "umlTitle",

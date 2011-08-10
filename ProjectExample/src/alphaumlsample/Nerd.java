@@ -6,7 +6,8 @@
 package alphaumlsample;
 
 /**
- *
+ * @umlTitle AlphaUML Example
+ * @umlPos x:49 y:511
  * @author MasterLinux
  */
 public class Nerd {
