@@ -1,0 +1,20 @@
+AlphaUML is an UML editor for Java written in JavaScript with the help of the Dojo Toolkit - http://dojotoolkit.org/ - and Adobe Air. 
+
+It provides the following features:
+
+- optimized for the Java programming language
+- round-trip engineering
+  * forward engineering & reverse engineering
+  * not really round-trip, caused by my self-written Java parser grammar ;)
+  * client-side java parsing with the help of pegjs 
+     -> see https://github.com/dmajda/pegjs 
+- an integrated source code editor with syntax highlighting
+  * see Ace https://github.com/ajaxorg/ace
+  * for editing source files in the UML editor
+- file system access via Adobe Air
+  * see http://www.adobe.com/devnet/air.html
+  * only used to get access to the file system 
+    and for providing a client-side web-app
+- single page web app
+- completely written in JavaScript 
+- development focus to be a fully web app
